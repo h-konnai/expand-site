@@ -26,8 +26,8 @@ body{
   padding:14px 20px; background:#ffffffcc; backdrop-filter:saturate(180%) blur(8px);
   border-bottom:1px solid #eef2f7;
 }
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; letter-spacing:.02em}
-.logo{height:28px; width:auto}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink); font-weight:700; letter-spacing:.02em}
+.logo{height:50px; width:auto}
 .logo.small{height:22px}
 .nav{display:flex; align-items:center; gap:18px}
 .nav a{color:var(--ink); text-decoration:none}
