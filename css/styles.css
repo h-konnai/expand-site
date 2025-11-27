@@ -141,3 +141,11 @@ html, body {
   letter-spacing: 0.2em;
   line-height: 1.8;
 }
+
+.btn.small {
+  background: #2f82e9 !important;
+}
+
+.btn.small:hover {
+  background: #256fc7;
+}
