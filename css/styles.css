@@ -136,3 +136,5 @@ html, body {
 .hero p {
   letter-spacing: 0.07em !important;
 }
+
+body { background-color: #ffeeee !important; }
