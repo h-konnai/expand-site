@@ -125,7 +125,7 @@ body{
 
 /* === 文字の間隔を全体的に少し広げる（上書き用） === */
 html, body {
-  letter-spacing: 0.28em !important;
+  letter-spacing: 0.3em !important;
 }
 
 /* ヒーローの大タイトルとリード文も個別に上書き */
