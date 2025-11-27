@@ -122,7 +122,6 @@ body{
   margin-top: 40px;
   font-size: 18px;
 }
-
 body {
   line-height: 1.8;
   letter-spacing: normal;
@@ -130,4 +129,9 @@ body {
 
 p {
   line-height: 1.8;
+}
+
+section {
+  line-height: 1.8;
+  letter-spacing: normal;
 }
