@@ -139,5 +139,5 @@ html, body {
 
 /* ===== サービスセクションの文字間を調整 ===== */
 .service-card {
-  letter-spacing: 0.25em !important;
+  letter-spacing: 0.45em !important;
 }
