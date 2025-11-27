@@ -89,3 +89,36 @@ body{
   .service-list{grid-template-columns:1fr}
   .hero-inner{padding:56px 16px}
 }
+
+.strengths {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.strengths h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.strength-box {
+  border: 1px solid #e6f0ff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.strength-box h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #003366; /* EXPANDブルーに近い色 */
+}
+
+.strength-message {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+}
