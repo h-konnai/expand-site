@@ -76,6 +76,47 @@ body{
 /* Contact */
 .contact-box{border:1px solid #eef2f7; padding:16px; border-radius:12px; background:#fbfdff;}
 
+/* Services */
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2列並び */
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.service-card {
+  padding: 18px 20px;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+/* 見出しリンクの見え方（下線消す・色統一） */
+.service-card a {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;    /* 下線なし */
+}
+
+/* visited でも色を変えない */
+.service-card a:visited {
+  color: var(--ink);
+}
+
+/* 説明文 */
+.service-card p {
+  margin-top: 8px;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+/* ホバー時、少し強調（お好みで調整OK） */
+.service-card:hover {
+  background: #f0f6ff;
+  border-color: #d7e4ff;
+}
+
 /* Footer */
 .site-footer{margin-top:40px; border-top:1px solid #eef2f7; background:#ffffff}
 .footer-inner{max-width:1080px; margin:0 auto; padding:20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
