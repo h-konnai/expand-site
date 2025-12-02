@@ -190,3 +190,41 @@ html, body {
 .btn.small:hover {
   background: #256fc7;
 }
+
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.service-card {
+  display: block;
+  padding: 20px 22px;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  background: #f8fbff;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.25s ease;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* ホバー時の反応 */
+.service-card:hover {
+  background: #f0f6ff;
+  border-color: #d7e4ff;
+  transform: translateY(-2px);
+}
