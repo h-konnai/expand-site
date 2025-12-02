@@ -262,3 +262,231 @@ html, body {
   color: #fff;
   font-weight: 700;
 }
+
+/* =========================
+   Before / After 比較ブロック
+   ========================= */
+.compare {
+  padding: 40px 0;
+  background: #f7f9fc;
+}
+
+.compare h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.compare-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.compare-block {
+  flex: 1 1 320px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 10px rgba(15, 35, 95, 0.04);
+  box-sizing: border-box;
+}
+
+.compare-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.compare-label.after {
+  background: #2f82e9;
+  color: #ffffff;
+}
+
+.compare-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.compare-block li {
+  margin-bottom: 12px;
+}
+
+.compare-block li strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.compare-before {
+  border: 1px solid #e5e7eb;
+}
+
+.compare-after {
+  border: 1px solid #c7dcff;
+  background: #f5f9ff;
+}
+
+/* スマホ向け */
+@media (max-width: 767px) {
+  .compare {
+    padding: 28px 0;
+  }
+  .compare-inner {
+    flex-direction: column;
+  }
+  .compare-block {
+    padding: 16px 16px;
+  }
+}
+
+/* =========================
+   ご支援の流れ（ステップ図）
+   ========================= */
+.process-flow {
+  padding: 40px 0;
+}
+
+.process-flow h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.process-steps {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.process-step {
+  flex: 1 1 260px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 18px;
+  box-sizing: border-box;
+}
+
+.step-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2f82e9;
+  margin-bottom: 6px;
+}
+
+.process-step h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.process-step p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* スマホ向け */
+@media (max-width: 767px) {
+  .process-steps {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   CRM導入後のイメージ図
+   ========================= */
+.crm-layout {
+  padding: 40px 0;
+  background: #f7f9fc;
+}
+
+.crm-layout h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.crm-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.crm-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 18px;
+  box-sizing: border-box;
+}
+
+.crm-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.crm-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* 疑似UI部分（バーやカラム） */
+.crm-ui {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.crm-ui .bar {
+  height: 8px;
+  border-radius: 4px;
+  background: #e5edff;
+  margin-bottom: 6px;
+}
+
+.crm-ui .bar.short {
+  width: 60%;
+}
+
+.crm-ui.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.crm-ui.columns li {
+  height: 22px;
+  border-radius: 4px;
+  background: #e5edff;
+}
+
+.crm-ui .line {
+  height: 6px;
+  border-radius: 3px;
+  background: #e5edff;
+  margin-bottom: 4px;
+}
+
+.crm-note {
+  max-width: 1080px;
+  margin: 12px auto 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* スマホ向け */
+@media (max-width: 960px) {
+  .crm-grid {
+    grid-template-columns: 1fr;
+  }
+}
