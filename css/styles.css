@@ -228,3 +228,37 @@ html, body {
   border-color: #d7e4ff;
   transform: translateY(-2px);
 }
+
+/* Service pages navigation */
+.service-nav {
+  max-width: 1080px;
+  margin: 40px auto 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-nav a {
+  flex: 1 1 220px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #e1e8f5;
+  background: #f7faff;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.service-nav a:hover {
+  background: #e9f3ff;
+  border-color: #c7dcff;
+}
+
+.service-nav a.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+  font-weight: 700;
+}
