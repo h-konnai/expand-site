@@ -490,3 +490,99 @@ html, body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- 共通 ---- */
+.section-title {
+  font-size: 26px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.problem-list li {
+  margin-bottom: 8px;
+}
+
+/* ---- Before / After 図解 ---- */
+.diagram-cols {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.diagram-col {
+  flex: 1;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.diagram-arrow {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- STEPS ---- */
+.steps {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.step-card {
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* ---- SERVICE CARDS ---- */
+.grid-cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+/* ---- CTA ---- */
+.cta-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #007acc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.service-nav-list {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.service-nav-list .active a {
+  font-weight: bold;
+  color: #007acc;
+}
+
+/* ---- SP ---- */
+@media screen and (max-width: 768px) {
+  .diagram-cols {
+    flex-direction: column;
+  }
+}
