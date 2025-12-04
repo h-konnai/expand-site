@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ホーム -->
+  <url>
+    <loc>https://fs-expand.co.jp/</loc>
+  </url>
+
+  <!-- 会社概要 -->
+  <url>
+    <loc>https://fs-expand.co.jp/about.html</loc>
+  </url>
+
+  <!-- お問い合わせ -->
+  <url>
+    <loc>https://fs-expand.co.jp/contact.html</loc>
+  </url>
+
+  <!-- プライバシーポリシー -->
+  <url>
+    <loc>https://fs-expand.co.jp/privacy.html</loc>
+  </url>
+
+  <!-- サービス：営業支援・CRM / MA構築 -->
+  <url>
+    <loc>https://fs-expand.co.jp/service-crm.html</loc>
+  </url>
+
+  <!-- サービス：業務設計・DX推進 -->
+  <url>
+    <loc>https://fs-expand.co.jp/service-dx.html</loc>
+  </url>
+
+  <!-- サービス：教育・人材育成プログラム -->
+  <url>
+    <loc>https://fs-expand.co.jp/service-education.html</loc>
+  </url>
+
+  <!-- サービス：Web制作・マーケティング支援 -->
+  <url>
+    <loc>https://fs-expand.co.jp/service-web.html</loc>
+  </url>
+
+  <!-- 利用規約 -->
+  <url>
+    <loc>https://fs-expand.co.jp/terms.html</loc>
+  </url>
+
+  <!-- お問い合わせ完了画面 -->
+  <url>
+    <loc>https://fs-expand.co.jp/thanks.html</loc>
+  </url>
+
+</urlset>
