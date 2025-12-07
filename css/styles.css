@@ -39,7 +39,8 @@ body{
 }
 .btn:hover{background:var(--brand-2); border-color:var(--brand-2)}
 .btn.ghost{background:#fff; color:var(--brand); border-color:var(--brand)}
-.btn.small{padding:8px 12px; font-size:.95rem}
+.btn.small{padding:8px 12px; font-size:.95rem; background:#2f82e9;}
+.btn.small:hover{background:#256fc7}
 
 /* Hero */
 .hero{
@@ -47,7 +48,11 @@ body{
   border-bottom:1px solid #eef2f7;
 }
 .hero-inner{max-width:1080px; margin:0 auto; padding:72px 20px; text-align:left}
-.hero h1{font-size:clamp(28px, 4vw, 40px); margin:0 0 10px; letter-spacing:.0.06em}
+.hero h1{
+  font-size:clamp(28px, 4vw, 40px);
+  margin:0 0 10px;
+  letter-spacing:0.06em;
+}
 .lead{font-size:1.05rem; color:var(--muted); margin:0 0 22px}
 .hero-ctas{display:flex; gap:12px}
 
@@ -60,8 +65,22 @@ body{
 .card h3{margin:0 0 6px; font-size:1.05rem}
 .values{margin:0; padding-left:18px}
 .values li{margin:.25rem 0}
-.service-list{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:8px; list-style:none; padding:0}
-.service-list li{padding:12px 14px; border:1px dashed #dbe3ef; border-radius:12px; background:#f8fbff}
+
+/* Services list（統合版） */
+.service-list{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:24px;
+  list-style:none;
+  padding:0;
+  margin-top:24px;
+}
+.service-list li{
+  padding:12px 14px;
+  border:1px dashed #dbe3ef;
+  border-radius:12px;
+  background:#f8fbff;
+}
 .service-list span{letter-spacing:.02em}
 
 /* CTA */
@@ -76,121 +95,7 @@ body{
 /* Contact */
 .contact-box{border:1px solid #eef2f7; padding:16px; border-radius:12px; background:#fbfdff;}
 
-/* Services */
-.service-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2列並び */
-  gap: 24px;
-  margin-top: 24px;
-}
-
-.service-card {
-  padding: 18px 20px;
-  border: 1px solid #eef2f7;
-  border-radius: 12px;
-  background: #f8fbff;
-}
-
-/* 見出しリンクの見え方（下線消す・色統一） */
-.service-card a {
-  display: inline-block;
-  font-weight: 600;
-  color: var(--ink);
-  text-decoration: none;    /* 下線なし */
-}
-
-/* visited でも色を変えない */
-.service-card a:visited {
-  color: var(--ink);
-}
-
-/* 説明文 */
-.service-card p {
-  margin-top: 8px;
-  font-size: .95rem;
-  color: var(--muted);
-}
-
-/* ホバー時、少し強調（お好みで調整OK） */
-.service-card:hover {
-  background: #f0f6ff;
-  border-color: #d7e4ff;
-}
-
-/* Footer */
-.site-footer{margin-top:40px; border-top:1px solid #eef2f7; background:#ffffff}
-.footer-inner{max-width:1080px; margin:0 auto; padding:20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
-.foot-links{display:flex; gap:16px}
-.copy{margin:0; padding:8px 20px 24px; color:#6b7280; font-size:.9rem; text-align: center; letter-spacing: 0em;}
-
-/* Responsive */
-@media (max-width:760px){
-  .nav{gap:12px}
-  .grid3{grid-template-columns:1fr}
-  .service-list{grid-template-columns:1fr}
-  .hero-inner{padding:56px 16px}
-}
-
-.strengths {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.strengths h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.strength-box {
-  border: 1px solid #e6f0ff;
-  border-radius: 16px;
-  padding: 20px 24px;
-  margin-bottom: 24px;
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-}
-
-.strength-box h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #003366; /* EXPANDブルーに近い色 */
-}
-
-.strength-message {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 18px;
-}
-
-/* === 文字の間隔を全体的に少し広げる（上書き用） === */
-html, body {
-  letter-spacing: 0.45em !important;
-}
-
-/* ヒーローの大タイトルとリード文も個別に上書き */
-.hero h1 {
-  letter-spacing: 0.2em !important;
-}
-
-.hero p {
-  letter-spacing: 0.06em !important;
-}
-
-.service-card {
-  letter-spacing: 0.2em;
-  line-height: 1.8;
-}
-
-.btn.small {
-  background: #2f82e9 !important;
-}
-
-.btn.small:hover {
-  background: #256fc7;
-}
-
+/* Services（カード） */
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -207,22 +112,32 @@ html, body {
   text-decoration: none;
   color: var(--ink);
   transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
 }
 
-.service-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+/* 見出しリンクの見え方（下線消す・色統一） */
+.service-card a {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* visited でも色を変えない */
+.service-card a:visited {
   color: var(--ink);
 }
 
+/* 説明文 */
 .service-card p {
-  font-size: 0.95rem;
-  color: #5a5a5a;
+  margin-top: 8px;
+  font-size: .95rem;
+  color: var(--muted);
   line-height: 1.6;
 }
 
-/* ホバー時の反応 */
+/* ホバー時、少し強調 */
 .service-card:hover {
   background: #f0f6ff;
   border-color: #d7e4ff;
@@ -261,6 +176,54 @@ html, body {
   border-color: var(--brand);
   color: #fff;
   font-weight: 700;
+}
+
+/* Footer */
+.site-footer{margin-top:40px; border-top:1px solid #eef2f7; background:#ffffff}
+.footer-inner{max-width:1080px; margin:0 auto; padding:20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.foot-links{display:flex; gap:16px}
+.copy{margin:0; padding:8px 20px 24px; color:#6b7280; font-size:.9rem; text-align: center; letter-spacing: 0em;}
+
+/* Responsive 基本 */
+@media (max-width:760px){
+  .nav{gap:12px}
+  .grid3{grid-template-columns:1fr}
+  .service-list{grid-template-columns:1fr}
+  .hero-inner{padding:56px 16px}
+}
+
+/* strengths */
+.strengths {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.strengths h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.strength-box {
+  border: 1px solid #e6f0ff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.strength-box h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #003366;
+}
+
+.strength-message {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
 }
 
 /* =========================
@@ -538,14 +501,14 @@ html, body {
   background: #fff;
 }
 
-/* ---- SERVICE CARDS ---- */
+/* ---- SERVICE CARDS（grid-cards 内だけに適用） ---- */
 .grid-cards {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.service-card {
+.grid-cards .service-card {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
