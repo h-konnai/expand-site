@@ -7,3 +7,37 @@
     }
   ]
 }
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/service-crm.html",
+      "destination": "/service-crm/",
+      "permanent": true
+    },
+    {
+      "source": "/service-dx.html",
+      "destination": "/service-dx/",
+      "permanent": true
+    },
+    {
+      "source": "/service-web.html",
+      "destination": "/service-web/",
+      "permanent": true
+    }
+  ]
+}
