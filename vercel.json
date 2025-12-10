@@ -1,37 +1,26 @@
 {
   "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    }
+    { "source": "/index.html",             "destination": "/",                  "permanent": true },
+    { "source": "/about.html",             "destination": "/about",             "permanent": true },
+    { "source": "/contact.html",           "destination": "/contact",           "permanent": true },
+    { "source": "/service-crm.html",       "destination": "/service-crm",       "permanent": true },
+    { "source": "/service-dx.html",        "destination": "/service-dx",        "permanent": true },
+    { "source": "/service-web.html",       "destination": "/service-web",       "permanent": true },
+    { "source": "/service-education.html", "destination": "/service-education", "permanent": true },
+    { "source": "/privacy.html",           "destination": "/privacy",           "permanent": true },
+    { "source": "/terms.html",             "destination": "/terms",             "permanent": true },
+    { "source": "/thanks.html",            "destination": "/thanks",            "permanent": true }
   ],
   "rewrites": [
-    { "source": "/about",              "destination": "/about.html" },
-    { "source": "/about/",             "destination": "/about.html" },
-
-    { "source": "/contact",            "destination": "/contact.html" },
-    { "source": "/contact/",           "destination": "/contact.html" },
-
-    { "source": "/service-crm",        "destination": "/service-crm.html" },
-    { "source": "/service-crm/",       "destination": "/service-crm.html" },
-
-    { "source": "/service-dx",         "destination": "/service-dx.html" },
-    { "source": "/service-dx/",        "destination": "/service-dx.html" },
-
-    { "source": "/service-web",        "destination": "/service-web.html" },
-    { "source": "/service-web/",       "destination": "/service-web.html" },
-
-    { "source": "/service-education",  "destination": "/service-education.html" },
-    { "source": "/service-education/", "destination": "/service-education.html" },
-
-    { "source": "/privacy",            "destination": "/privacy.html" },
-    { "source": "/privacy/",           "destination": "/privacy.html" },
-
-    { "source": "/terms",              "destination": "/terms.html" },
-    { "source": "/terms/",             "destination": "/terms.html" },
-
-    { "source": "/thanks",             "destination": "/thanks.html" },
-    { "source": "/thanks/",            "destination": "/thanks.html" }
+    { "source": "/about",             "destination": "/about.html" },
+    { "source": "/contact",           "destination": "/contact.html" },
+    { "source": "/service-crm",       "destination": "/service-crm.html" },
+    { "source": "/service-dx",        "destination": "/service-dx.html" },
+    { "source": "/service-web",       "destination": "/service-web.html" },
+    { "source": "/service-education", "destination": "/service-education.html" },
+    { "source": "/privacy",           "destination": "/privacy.html" },
+    { "source": "/terms",             "destination": "/terms.html" },
+    { "source": "/thanks",            "destination": "/thanks.html" }
   ]
 }
+
