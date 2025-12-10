@@ -17,7 +17,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   font-feature-settings:"palt" 1;
-  letter-spacing:0.5em;
+  letter-spacing:0.3em;
 }
 
 /* Header */
