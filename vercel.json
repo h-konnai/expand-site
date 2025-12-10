@@ -5,5 +5,33 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/about",              "destination": "/about.html" },
+    { "source": "/about/",             "destination": "/about.html" },
+
+    { "source": "/contact",            "destination": "/contact.html" },
+    { "source": "/contact/",           "destination": "/contact.html" },
+
+    { "source": "/service-crm",        "destination": "/service-crm.html" },
+    { "source": "/service-crm/",       "destination": "/service-crm.html" },
+
+    { "source": "/service-dx",         "destination": "/service-dx.html" },
+    { "source": "/service-dx/",        "destination": "/service-dx.html" },
+
+    { "source": "/service-web",        "destination": "/service-web.html" },
+    { "source": "/service-web/",       "destination": "/service-web.html" },
+
+    { "source": "/service-education",  "destination": "/service-education.html" },
+    { "source": "/service-education/", "destination": "/service-education.html" },
+
+    { "source": "/privacy",            "destination": "/privacy.html" },
+    { "source": "/privacy/",           "destination": "/privacy.html" },
+
+    { "source": "/terms",              "destination": "/terms.html" },
+    { "source": "/terms/",             "destination": "/terms.html" },
+
+    { "source": "/thanks",             "destination": "/thanks.html" },
+    { "source": "/thanks/",            "destination": "/thanks.html" }
   ]
 }
