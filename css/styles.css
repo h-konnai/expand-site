@@ -17,6 +17,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   font-feature-settings:"palt" 1;
+  letter-spacing:0.05em;
 }
 
 /* Header */
@@ -182,7 +183,7 @@ body{
 .site-footer{margin-top:40px; border-top:1px solid #eef2f7; background:#ffffff}
 .footer-inner{max-width:1080px; margin:0 auto; padding:20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
 .foot-links{display:flex; gap:16px}
-.copy{margin:0; padding:8px 20px 24px; color:#6b7280; font-size:.9rem; text-align: center; letter-spacing: 0em;}
+.copy{margin:0; padding:8px 20px 24px; color:#6b7280; font-size:.9rem; text-align: center; letter-spacing: 0.05em;}
 
 /* Responsive 基本 */
 @media (max-width:760px){
