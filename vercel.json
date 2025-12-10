@@ -4,15 +4,6 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
-    }
-  ]
-}
-{
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
     },
     {
       "source": "/about.html",
@@ -37,6 +28,26 @@
     {
       "source": "/service-web.html",
       "destination": "/service-web/",
+      "permanent": true
+    },
+    {
+      "source": "/service-education.html",
+      "destination": "/service-education/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/thanks.html",
+      "destination": "/thanks/",
       "permanent": true
     }
   ]
