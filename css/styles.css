@@ -852,3 +852,296 @@ body{
   background: var(--brand-2);
   border-color: var(--brand-2);
 }
+
+/* =====================================================
+   LP-FNB （飲食店向けライトパッケージ）
+   既存サイトと干渉しないよう、すべて名前空間化
+   ===================================================== */
+
+/* ベース余白 */
+.lp-fnb section {
+  padding: 80px 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .lp-fnb section {
+    padding: 60px 16px;
+  }
+}
+
+/* ------------------------------
+   SECTION 1｜HERO
+   ------------------------------ */
+.lp-fnb-hero {
+  background: #f4f8ff;
+  border-bottom: 1px solid #e5e9f2;
+  text-align: left;
+}
+
+.lp-fnb-hero__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.lp-fnb-hero__title {
+  font-size: clamp(24px, 4.2vw, 32px);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #0c3c78;
+  letter-spacing: 0.03em;
+}
+
+.lp-fnb-hero__lead {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+.lp-fnb-hero__cta {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 999px;
+  background: #2f82e9;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(47,130,233,0.25);
+  transition: 0.2s ease;
+}
+
+.lp-fnb-hero__cta:hover {
+  background: #11529f;
+  box-shadow: 0 3px 10px rgba(17,82,159,0.25);
+}
+
+/* ------------------------------
+   SECTION 2｜伸ばせるポイント
+   ------------------------------ */
+.lp-fnb-gaps__title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.lp-fnb-gaps__lead {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+.lp-fnb-gaps__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.lp-fnb-gaps__list li {
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.lp-fnb-gaps__list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: #2f82e9;
+}
+
+.lp-fnb-gaps__close {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* ------------------------------
+   SECTION 3｜できること（3つ）
+   ------------------------------ */
+.lp-fnb-features__title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.lp-fnb-features__lead {
+  margin-bottom: 32px;
+  color: #444;
+}
+
+.lp-fnb-features__items {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .lp-fnb-features__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lp-fnb-features__item {
+  padding: 20px;
+  border: 1px solid #e4e9f3;
+  border-radius: 12px;
+  background: #fff;
+  line-height: 1.8;
+  transition: 0.2s ease;
+}
+
+.lp-fnb-features__item:hover {
+  border-color: #c8d8f8;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.lp-fnb-features__item h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #0c3c78;
+}
+
+/* ------------------------------
+   SECTION 4｜90日後の未来
+   ------------------------------ */
+.lp-fnb-future__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.lp-fnb-future__cols {
+  display: flex;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .lp-fnb-future__cols {
+    flex-direction: column;
+  }
+}
+
+.lp-fnb-future__col {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e4e9f3;
+  border-radius: 12px;
+}
+
+.lp-fnb-future__col h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #11529f;
+}
+
+.lp-fnb-future__col ul {
+  padding-left: 1em;
+}
+
+.lp-fnb-future__col li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+/* ------------------------------
+   SECTION 5｜料金プラン
+   ------------------------------ */
+.lp-fnb-plans__lead {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.lp-fnb-plans__items {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .lp-fnb-plans__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lp-fnb-plans__item {
+  padding: 20px;
+  border: 1px solid #e4e9f3;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.lp-fnb-plans__item.highlight {
+  border-color: #2f82e9;
+  background: #f0f6ff;
+}
+
+.lp-fnb-plans__item h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.lp-fnb-plans__item ul {
+  padding-left: 1em;
+  margin: 0;
+}
+
+/* ------------------------------
+   SECTION 6｜事例
+   ------------------------------ */
+.lp-fnb-cases__lead {
+  margin-bottom: 24px;
+  color: #444;
+}
+
+.lp-fnb-cases__block {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e4e9f3;
+  line-height: 1.8;
+}
+
+/* ------------------------------
+   SECTION 7｜Q&A
+   ------------------------------ */
+.lp-fnb-faq__item {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e4e9f3;
+}
+
+.lp-fnb-faq__item h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+/* ------------------------------
+   SECTION 8｜最終CTA
+   ------------------------------ */
+.lp-fnb-final-cta {
+  text-align: center;
+}
+
+.lp-fnb-final-cta h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.lp-fnb-final-cta a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2f82e9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+}
