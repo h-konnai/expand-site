@@ -1281,5 +1281,5 @@ body.lp-fnb {
 /* ボタンは読みやすさ重視で少し控えめ */
 .lp-fnb-hero__cta,
 .lp-fnb-final-cta .btn {
-  letter-spacing: 0.3em;
+  letter-spacing: 0.04em;
 }
