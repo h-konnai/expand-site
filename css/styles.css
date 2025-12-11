@@ -19,9 +19,7 @@ body{
   font-feature-settings:"palt" 1;
   letter-spacing:0.2em;
 }
-/* ★飲食店LPだけ、字間を狭くする */
-body.lp-fnb{
-  letter-spacing:0.05em;
+
   
 /* Header */
 .site-header{
