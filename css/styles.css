@@ -1145,3 +1145,141 @@ body{
   border-radius: 999px;
   font-weight: 600;
 }
+
+/* ---------------------------------------
+   LP-FNB 微調整（v2）
+   既存の lp-fnb スタイルの上書き・追加用
+   --------------------------------------- */
+
+/* セクションの最大幅を少しだけ広げて余裕を出す */
+.lp-fnb section {
+  max-width: 1120px;
+}
+
+/* セクションごとに背景を少し変えて、間延び防止 */
+.lp-fnb-hero {
+  background: #f4f8ff;
+}
+
+.lp-fnb-gaps {
+  background: #ffffff;
+}
+
+.lp-fnb-features {
+  background: #f7f9fc;
+}
+
+.lp-fnb-future {
+  background: #ffffff;
+}
+
+.lp-fnb-plans {
+  background: #f7f9fc;
+}
+
+.lp-fnb-cases {
+  background: #ffffff;
+}
+
+.lp-fnb-faq {
+  background: #f7f9fc;
+}
+
+.lp-fnb-final-cta {
+  background: #ffffff;
+}
+
+/* 見出し周りの余白を少し広げて、呼吸させる */
+.lp-fnb-gaps__title,
+.lp-fnb-features__title,
+.lp-fnb-future__title,
+.lp-fnb-plans h2,
+.lp-fnb-cases h2,
+.lp-fnb-faq h2,
+.lp-fnb-final-cta h2 {
+  margin-bottom: 24px;
+}
+
+/* Q&Aは少しだけ文字を大きくして読みやすく */
+.lp-fnb-faq__item h3 {
+  font-size: 18px;
+}
+
+.lp-fnb-faq__item p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* 料金プランの中央寄せ感を少し強める */
+.lp-fnb-plans h2 {
+  text-align: center;
+}
+
+.lp-fnb-plans__lead {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 最終CTAの本文も横幅を絞って読みやすく */
+.lp-fnb-final-cta p {
+  max-width: 640px;
+  margin: 0 auto 16px;
+}
+
+/* スマホ向けの微調整 */
+@media (max-width: 767px) {
+  /* HEROボタンを幅100%にしてタップしやすく */
+  .lp-fnb-hero__cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 本文フォントを気持ち大きくして読みやすく */
+  .lp-fnb-hero__lead,
+  .lp-fnb-gaps__lead,
+  .lp-fnb-gaps__list li,
+  .lp-fnb-gaps__close,
+  .lp-fnb-features__lead,
+  .lp-fnb-features__item p,
+  .lp-fnb-future__col li,
+  .lp-fnb-plans__lead,
+  .lp-fnb-cases__lead,
+  .lp-fnb-cases__block p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  /* セクションの上下余白はややコンパクトに */
+  .lp-fnb section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+/* ================================
+   LP-FNB 用 letter-spacing 調整
+   ================================ */
+
+/* LP 全体の標準字間（やや広め） */
+body.lp-fnb {
+  letter-spacing: 0.05em;  /* サイト全体の 0.3em より落ち着いた値 */
+}
+
+/* 見出しは少しだけ強めに */
+.lp-fnb-hero__title,
+.lp-fnb-gaps__title,
+.lp-fnb-features__title,
+.lp-fnb-future__title,
+.lp-fnb-plans h2,
+.lp-fnb-cases h2,
+.lp-fnb-faq h2,
+.lp-fnb-final-cta h2 {
+  letter-spacing: 0.06em;
+}
+
+/* ボタンは読みやすさ重視で少し控えめ */
+.lp-fnb-hero__cta,
+.lp-fnb-final-cta .btn {
+  letter-spacing: 0.3em;
+}
