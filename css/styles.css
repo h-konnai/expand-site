@@ -680,3 +680,175 @@ body{
   }
 }
 
+/* =========================
+   TOP：Solve（よくある課題）
+   ========================= */
+.solve {
+  background: #f7f9fc;
+}
+
+.solve h2 {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.solve-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.solve .card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.solve .card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.solve-close {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* SP */
+@media (max-width: 760px) {
+  .solve-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   TOP：Value（EXPANDの強み）
+   ========================= */
+.value {
+  background: #ffffff;
+}
+
+.value h2 {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.value-item {
+  padding: 18px 18px;
+  border-radius: 14px;
+  background: #f8fbff;
+  border: 1px solid #e2ecfb;
+}
+
+.value-item h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.value-item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.value-close {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* SP */
+@media (max-width: 760px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   TOP：Service（4つのサービス導線）
+   ========================= */
+.service {
+  background: #f7f9fc;
+}
+
+.service h2 {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+/* 既存 .service-card を補強 */
+.service-grid .service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-grid .service-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.service-grid .service-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.service-grid .service-card a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--brand);
+}
+
+/* SP */
+@media (max-width: 760px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   TOP：CTA（無料相談）
+   ========================= */
+.cta {
+  text-align: center;
+  border-top: 1px solid #eef2f7;
+  background: #ffffff;
+}
+
+.cta h2 {
+  margin-bottom: 16px;
+}
+
+.cta-text {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+/* btn-primary（見た目は既存.btnを流用） */
+.btn.btn-primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background: var(--brand-2);
+  border-color: var(--brand-2);
+}
