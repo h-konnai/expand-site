@@ -17,7 +17,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   font-feature-settings:"palt" 1;
-  letter-spacing:0.3em;
+  letter-spacing:0.08em;
 }
 
 /* Header */
@@ -187,7 +187,7 @@ body{
 
 
 /* Sections */
-.section{max-width:1080px; margin:0 auto; padding:48px 20px}
+.section{max-width:1080px; margin:0 auto; padding:60px 20px}
 .section h2{font-size:clamp(22px, 3vw, 28px); margin:0 0 18px}
 .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
 .grid3.compact{gap:12px}
@@ -709,10 +709,10 @@ body{
   color: var(--muted);
 }
 
-.solve-close {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--muted);
+.solve-close{
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: #9ca3af; /* 少し薄めのグレーに */
 }
 
 /* SP */
@@ -759,9 +759,9 @@ body{
 }
 
 .value-close {
-  margin: 4px 0 0;
-  font-size: 0.95rem;
-  color: var(--muted);
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: #9ca3af; /* 少し薄めのグレーに */
 }
 
 /* SP */
