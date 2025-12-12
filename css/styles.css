@@ -1314,3 +1314,31 @@ body.lp-fnb * {
 .lp-entry__link:hover {
   text-decoration: underline;
 }
+
+/* =========================
+   LP-FNB 途中CTA
+   ========================= */
+
+.lp-fnb-mid-cta {
+  margin: 64px auto 0;
+  padding: 40px 16px;
+  text-align: center;
+  background: #f7f9fc;
+}
+
+.lp-fnb-mid-cta__text {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* SP */
+@media (max-width: 767px) {
+  .lp-fnb-mid-cta {
+    padding: 32px 16px;
+  }
+
+  .lp-fnb-mid-cta .btn {
+    width: 100%;
+  }
+}
