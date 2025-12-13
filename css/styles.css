@@ -1519,3 +1519,23 @@ body.lp-fnb .lp-fnb-hero__cta .btn{
     justify-content: center;
   }
 }
+
+/* LP-FNB CTA force visible */
+body.lp-fnb .lp-fnb-hero__cta{
+  position: relative;
+  z-index: 2;
+  margin-top: 16px;
+}
+
+body.lp-fnb .lp-fnb-hero__cta a{
+  display: inline-flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+body.lp-fnb .lp-fnb-hero__cta .btn{
+  background: #0c3c78 !important;
+  color: #fff !important;
+  border: 1px solid #0c3c78 !important;
+}
