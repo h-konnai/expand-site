@@ -1539,3 +1539,59 @@ body.lp-fnb .lp-fnb-hero__cta .btn{
   color: #fff !important;
   border: 1px solid #0c3c78 !important;
 }
+
+/* =========================
+   LP FNB / HERO fix (CTAが消える問題の対策)
+   ========================= */
+
+.lp-fnb .lp-fnb-hero{
+  position: relative;
+  color: #fff;
+  /* 画像パスは実ファイルに合わせて */
+  background: url("/assets/lp-fnb/hero.webp") center center / cover no-repeat;
+}
+
+/* 左側を暗くして可読性を上げるオーバーレイ */
+.lp-fnb .lp-fnb-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.40) 0%,
+    rgba(0,0,0,0.18) 45%,
+    rgba(0,0,0,0.00) 75%
+  );
+  z-index: 0; /* ← 重要：背景として下に置く */
+}
+
+/* 中身をオーバーレイより上へ */
+.lp-fnb .lp-fnb-hero__inner{
+  position: relative;
+  z-index: 1; /* ← 重要：文字とCTAを前面に */
+  max-width: 1120px;
+  margin-left: max(8vw, 40px);
+  margin-right: auto;
+  padding: 96px 24px;
+}
+
+/* CTAが消える/押せない系を強制的に復旧（まずは確実に表示させる） */
+.lp-fnb .lp-fnb-hero__cta .btn{
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SP */
+@media (max-width: 767px){
+  .lp-fnb .lp-fnb-hero{
+    background-position: center top;
+  }
+  .lp-fnb .lp-fnb-hero__inner{
+    margin-left: 0;
+    padding: 64px 16px 56px;
+  }
+  .lp-fnb .lp-fnb-hero__cta .btn{
+    width: 100%;
+  }
+}
