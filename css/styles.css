@@ -1344,29 +1344,40 @@ body.lp-fnb * {
 }
 
 /* =========================
-   LP-FNB 画像差し込み枠
+   LP FNB / HERO
    ========================= */
-
-/* HERO 背景（ASSET納品後にファイル名だけ差し替える） */
 .lp-fnb-hero{
   position: relative;
-  color: #fff;
-  background: #111; /* 仮。納品後にurlへ差し替え */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-height: 60vh;           /* PC */
+  max-height: 520px;
+  background: url("/assets/lp-fnb/hero.webp") center center / cover no-repeat;
+  color: #0c3c78;             /* 既存トーン踏襲 */
 }
 
-/* 可読性のための暗めオーバーレイ */
+/* 可読性用の薄い白オーバーレイ */
 .lp-fnb-hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 55%, rgba(0,0,0,.05) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.92) 0%,
+    rgba(255,255,255,0.78) 45%,
+    rgba(255,255,255,0.55) 70%,
+    rgba(255,255,255,0.35) 100%
+  );
 }
 
 .lp-fnb-hero__inner{
   position: relative;
+  max-width: 1120px;
+  margin-left: max(8vw, 40px);
+  margin-right: auto;
+  padding: 96px 24px;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .lp-fnb-features__media{
@@ -1393,4 +1404,26 @@ body.lp-fnb * {
   display:block;
   width:100%;
   height:auto;
+}
+
+@media (max-width: 767px){
+  .lp-fnb-hero{
+    min-height: 420px;
+    background-position: center top;
+  }
+  .lp-fnb-hero__inner{
+    margin-left: 0;
+    padding: 64px 16px 56px;
+  }
+}
+
+.lp-fnb-hero__cta{
+  margin-top: 24px;
+}
+.lp-fnb-hero__cta .btn{
+  padding: 14px 28px;
+  border-radius: 9999px;
+}
+@media (max-width: 767px){
+  .lp-fnb-hero__cta .btn{ width:100%; }
 }
