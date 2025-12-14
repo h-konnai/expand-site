@@ -32,19 +32,22 @@ body.lp-fnb .lp-fnb-hero::before{
   pointer-events: none;
 }
 
-body.lp-fnb .lp-fnb-hero > *{
+body.lp-fnb .lp-fnb-hero{
   position: relative;
-  z-index: 1;
+  min-height: 72vh; /* ← これが重要。画像領域を保証 */
+  display: flex;
+  align-items: center; /* 縦中央 */
 }
 
 body.lp-fnb .lp-fnb-hero__inner{
+  position: relative;
+  z-index: 1;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-
-  /* スクショは左寄せ */
   text-align: left;
 }
+
 
 /* 白ベール前提なので影は不要（濃い青で勝つ） */
 body.lp-fnb .lp-fnb-hero__title,
