@@ -1,1 +1,93 @@
-/* ========================================================= LP FNB - HERO (actual markup: section.hero) 仕様: 背景画像 + 薄いオーバーレイ ========================================================= */ body.lp-fnb section.hero{ position: relative; background-image: url("/assets/lp-fnb/hero.webp"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: clamp(56px, 8vw, 120px) 0; color: #fff; } body.lp-fnb section.hero::before{ content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.32); /* 読みにくければ 0.36〜0.40 */ pointer-events: none; } body.lp-fnb section.hero > *{ position: relative; z-index: 1; } /* Inner */ body.lp-fnb section.hero .hero-inner{ max-width: 960px; margin: 0 auto; padding: 0 20px; text-align: center; } /* Title */ body.lp-fnb section.hero .hero-title{ font-size: clamp(28px, 3.4vw, 44px); line-height: 1.2; letter-spacing: 0.02em; margin: 0 0 14px; text-shadow: 0 2px 10px rgba(0,0,0,0.28); } /* Tagline */ body.lp-fnb section.hero .hero-tagline{ margin: 0 0 14px; letter-spacing: 0.14em; text-transform: none; opacity: 0.9; text-shadow: 0 2px 10px rgba(0,0,0,0.28); } /* Subcopy */ body.lp-fnb section.hero .hero-subcopy{ max-width: 760px; margin: 0 auto 22px; line-height: 1.85; text-shadow: 0 2px 10px rgba(0,0,0,0.28); } /* CTA */ body.lp-fnb section.hero a.hero-cta{ display: inline-flex; align-items: center; justify-content: center; padding: 14px 22px; border-radius: 999px; background: rgba(255,255,255,0.95); color: #111; text-decoration: none; font-weight: 700; line-height: 1; white-space: nowrap; } body.lp-fnb section.hero a.hero-cta:hover{ background: #fff; } body.lp-fnb section.hero a.hero-cta:focus-visible{ outline: 3px solid rgba(255,255,255,0.95); outline-offset: 4px; }
+/* =========================================================
+   LP FNB - HERO（lp-fnb.html の実HTMLに一致）
+   仕様: 背景画像 + 薄いオーバーレイ
+   ※CTAは共通CSSに依存しない（LP内だけで完結）
+   ========================================================= */
+
+body.lp-fnb .lp-fnb-hero{
+  position: relative;
+
+  background-image: url("/assets/lp-fnb/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: clamp(56px, 8vw, 120px) 0;
+  color: #fff;
+}
+
+body.lp-fnb .lp-fnb-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.32); /* 読みにくければ 0.36〜0.40 */
+  pointer-events: none;
+}
+
+body.lp-fnb .lp-fnb-hero > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Inner */
+body.lp-fnb .lp-fnb-hero__inner{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Title */
+body.lp-fnb .lp-fnb-hero__title{
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+/* Lead */
+body.lp-fnb .lp-fnb-hero__lead{
+  max-width: 760px;
+  margin: 0 auto 22px;
+  line-height: 1.85;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+/* CTA wrapper */
+body.lp-fnb .lp-fnb-hero__cta{
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* CTA button（共通 .btn に依存させない：LPのCTA箱の中だけ再定義） */
+body.lp-fnb .lp-fnb-hero__cta a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.95);
+  color: #111;
+
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+
+  border: none;
+  box-shadow: none;
+}
+
+body.lp-fnb .lp-fnb-hero__cta a:hover{
+  background: #fff;
+}
+
+body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.95);
+  outline-offset: 4px;
+}
