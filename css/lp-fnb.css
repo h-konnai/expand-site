@@ -43,10 +43,16 @@ body.lp-fnb .lp-fnb-hero__inner{
   position: relative;
   z-index: 1;
   max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+
+  /* 中央寄せをやめる */
+  margin: 0 auto 0 0;
+
+  /* 左の余白を「画面に応じて」出す */
+  padding: 0 clamp(16px, 3vw, 24px) 0 clamp(24px, 6vw, 96px);
+
   text-align: left;
 }
+
 
 
 /* 白ベール前提なので影は不要（濃い青で勝つ） */
