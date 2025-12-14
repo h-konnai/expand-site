@@ -1,17 +1,19 @@
-/* =========================
-   HERO：ひろさんの理想（左白ベール→右透明）
-   ========================= */
+/* =========================================================
+   LP FNB - HERO（ひろさんの理想：左白ベール→右透明）
+   ========================================================= */
 
 body.lp-fnb .lp-fnb-hero{
   position: relative;
+
   background-image: url("/assets/lp-fnb/hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   padding: clamp(56px, 8vw, 120px) 0;
 
-  /* 白ベール前提なので文字はネイビー系 */
-  color: #0d2f57;
+  /* 理想の文字色（スクショの濃い青） */
+  color: #12417B;
 }
 
 body.lp-fnb .lp-fnb-hero::before{
@@ -19,7 +21,7 @@ body.lp-fnb .lp-fnb-hero::before{
   position: absolute;
   inset: 0;
 
-  /* 黒ベタ禁止：左を白く薄めて、右へフェードアウト */
+  /* 黒ベタ禁止：左を白く薄め、右へフェード */
   background: linear-gradient(
     90deg,
     rgba(255,255,255,0.92) 0%,
@@ -35,28 +37,24 @@ body.lp-fnb .lp-fnb-hero > *{
   z-index: 1;
 }
 
-/* テキスト側を左寄せにするとスクショの雰囲気に寄る */
 body.lp-fnb .lp-fnb-hero__inner{
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
+
+  /* スクショは左寄せ */
   text-align: left;
 }
 
-/* 白ベールなので text-shadow は弱める/無しでOK */
+/* 白ベール前提なので影は不要（濃い青で勝つ） */
 body.lp-fnb .lp-fnb-hero__title,
 body.lp-fnb .lp-fnb-hero__lead{
   text-shadow: none;
 }
 
-/* CTA wrapper */
-body.lp-fnb .lp-fnb-hero__cta{
-  margin-top: 12px;
-  text-align: center;
-}
-
-/* CTA button（共通 .btn に依存させない：LPのCTA箱の中だけ再定義） */
+/* CTA：この箱の中だけで共通CSSを切る（HTML変更なし） */
 body.lp-fnb .lp-fnb-hero__cta a{
+  all: unset; /* ← 共通 .btn の影響をゼロにする */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -72,8 +70,7 @@ body.lp-fnb .lp-fnb-hero__cta a{
   line-height: 1;
   white-space: nowrap;
 
-  border: none;
-  box-shadow: none;
+  cursor: pointer;
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:hover{
@@ -81,6 +78,6 @@ body.lp-fnb .lp-fnb-hero__cta a:hover{
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
-  outline: 3px solid rgba(255,255,255,0.95);
+  outline: 3px solid rgba(18,65,123,0.35);
   outline-offset: 4px;
 }
