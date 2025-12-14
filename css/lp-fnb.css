@@ -1,40 +1,21 @@
 /* =========================================================
    lp-fnb.css
-   Scope: ONLY /lp-fnb.html  (body has class="lp-fnb")
-   Policy: Do NOT touch common styles.css
+   Scope: ONLY /lp-fnb.html (body.lp-fnb)
+   Purpose: LP styling isolated from common styles.css
    ========================================================= */
 
+/* -------------------------
+   Base safety
+   ------------------------- */
+body.lp-fnb img { max-width: 100%; height: auto; }
+body.lp-fnb a { -webkit-tap-highlight-color: transparent; }
 
 /* =========================================================
-   0) Safety base (LP only)
+   HERO (actual markup: <section class="hero"> ...)
+   Spec: background image + thin overlay
    ========================================================= */
 
-body.lp-fnb img {
-  max-width: 100%;
-  height: auto;
-}
-
-body.lp-fnb a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-body.lp-fnb .lp-fnb-hero,
-body.lp-fnb .lp-fnb-gaps,
-body.lp-fnb .lp-fnb-features,
-body.lp-fnb .lp-fnb-future,
-body.lp-fnb .lp-fnb-plans,
-body.lp-fnb .lp-fnb-cases,
-body.lp-fnb .lp-fnb-faq,
-body.lp-fnb .lp-fnb-final-cta {
-  scroll-margin-top: 80px;
-}
-
-
-/* =========================================================
-   1) HERO (Background + Overlay)  ※仕様固定
-   ========================================================= */
-
-body.lp-fnb .lp-fnb-hero {
+body.lp-fnb section.hero{
   position: relative;
 
   background-image: url("/assets/lp-fnb/hero.webp");
@@ -47,65 +28,60 @@ body.lp-fnb .lp-fnb-hero {
   color: #fff;
 }
 
-body.lp-fnb .lp-fnb-hero::before {
+body.lp-fnb section.hero::before{
   content: "";
   position: absolute;
   inset: 0;
-
-  /* 読みにくい場合は 0.32 → 0.36〜0.40 に上げる */
-  background: rgba(0, 0, 0, 0.32);
-
+  background: rgba(0,0,0,0.32); /* 読みにくければ 0.36〜0.40 */
   pointer-events: none;
 }
 
-body.lp-fnb .lp-fnb-hero > * {
+body.lp-fnb section.hero > *{
   position: relative;
   z-index: 1;
 }
 
-/* HERO inner wrapper: いずれかが存在すれば整形される（事故防止） */
-body.lp-fnb .lp-fnb-hero .container,
-body.lp-fnb .lp-fnb-hero .inner,
-body.lp-fnb .lp-fnb-hero .wrap,
-body.lp-fnb .lp-fnb-hero .lp-fnb-hero-inner {
+body.lp-fnb section.hero .hero-inner{
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-
   text-align: center;
 }
 
-/* HERO typography */
-body.lp-fnb .lp-fnb-hero h1 {
+body.lp-fnb section.hero .hero-title{
   font-size: clamp(28px, 3.4vw, 44px);
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin: 0 0 14px;
 
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
 }
 
-body.lp-fnb .lp-fnb-hero p {
-  max-width: 760px;
-  margin: 0 auto 20px;
+body.lp-fnb section.hero .hero-tagline{
+  margin: 0 0 14px;
+  letter-spacing: 0.14em;
+  opacity: 0.9;
 
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+body.lp-fnb section.hero .hero-subcopy{
+  max-width: 760px;
+  margin: 0 auto 22px;
   line-height: 1.85;
 
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
 }
 
-/* HERO CTA (URLで拾うのでHTML変更不要) */
-body.lp-fnb .lp-fnb-hero a[href="/contact.html"] {
+body.lp-fnb section.hero a.hero-cta{
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  margin: 8px auto 0;
   padding: 14px 22px;
-
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255,255,255,0.95);
   color: #111;
 
   text-decoration: none;
@@ -114,47 +90,11 @@ body.lp-fnb .lp-fnb-hero a[href="/contact.html"] {
   white-space: nowrap;
 }
 
-body.lp-fnb .lp-fnb-hero a[href="/contact.html"]:hover {
+body.lp-fnb section.hero a.hero-cta:hover{
   background: #fff;
 }
 
-body.lp-fnb .lp-fnb-hero a[href="/contact.html"]:focus-visible {
-  outline: 3px solid rgba(255, 255, 255, 0.95);
+body.lp-fnb section.hero a.hero-cta:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.95);
   outline-offset: 4px;
 }
-
-
-/* =========================================================
-   2) Section spacing (safe defaults)
-   ========================================================= */
-
-body.lp-fnb .lp-fnb-gaps,
-body.lp-fnb .lp-fnb-features,
-body.lp-fnb .lp-fnb-future,
-body.lp-fnb .lp-fnb-plans,
-body.lp-fnb .lp-fnb-cases,
-body.lp-fnb .lp-fnb-faq,
-body.lp-fnb .lp-fnb-final-cta {
-  padding: clamp(48px, 6vw, 84px) 0;
-}
-
-
-/* =========================================================
-   3) Final CTA (if you want consistent button too)
-   ========================================================= */
-
-/* 末尾CTAにも同じ見た目を当てたい場合（存在すれば効く） */
-body.lp-fnb .lp-fnb-final-cta a[href="/contact.html"] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 14px 22px;
-  border-radius: 999px;
-
-  text-decoration: none;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-}
-
