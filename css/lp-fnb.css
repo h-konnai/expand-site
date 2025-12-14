@@ -5,7 +5,7 @@
 
 body.lp-fnb {
   /* グローバルを壊さない範囲で、LPだけ整える */
-  letter-spacing: normal; /* ← 全体の 0.3em を殺す（LPだけ） */
+  letter-spacing:0.2em; /* ← 全体の 0.3em を殺す（LPだけ） */
 }
 
 /* 共通：セクション余白と幅 */
