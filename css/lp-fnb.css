@@ -190,3 +190,78 @@ body.lp-fnb .lp-fnb-final-cta .btn {
     padding: 72px 0;
   }
 }
+
+/* =========================
+   HERO（画像 + CTA）整形
+   ========================= */
+
+body.lp-fnb .lp-fnb-hero{
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+
+body.lp-fnb .lp-fnb-hero .container,
+body.lp-fnb .lp-fnb-hero .inner,
+body.lp-fnb .lp-fnb-hero .wrap,
+body.lp-fnb .lp-fnb-hero .lp-fnb-hero-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* スマホは縦積み */
+@media (max-width: 900px){
+  body.lp-fnb .lp-fnb-hero .container,
+  body.lp-fnb .lp-fnb-hero .inner,
+  body.lp-fnb .lp-fnb-hero .wrap,
+  body.lp-fnb .lp-fnb-hero .lp-fnb-hero-inner{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* H1の読みやすさ（改行しても崩れない） */
+body.lp-fnb .lp-fnb-hero h1{
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+}
+
+/* HERO内の文章の行間 */
+body.lp-fnb .lp-fnb-hero p{
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+/* HERO画像（入っていれば） */
+body.lp-fnb .lp-fnb-hero img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* CTA（/contact.htmlへ飛ぶリンクをボタン化） */
+body.lp-fnb .lp-fnb-hero a[href="/contact.html"]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body.lp-fnb .lp-fnb-hero a[href="/contact.html"]:focus-visible{
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
