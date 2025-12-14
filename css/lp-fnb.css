@@ -1,26 +1,32 @@
-/* =========================================================
-   LP FNB - HERO（lp-fnb.html の実HTMLに一致）
-   仕様: 背景画像 + 薄いオーバーレイ
-   ※CTAは共通CSSに依存しない（LP内だけで完結）
-   ========================================================= */
+/* =========================
+   HERO：ひろさんの理想（左白ベール→右透明）
+   ========================= */
 
 body.lp-fnb .lp-fnb-hero{
   position: relative;
-
   background-image: url("/assets/lp-fnb/hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   padding: clamp(56px, 8vw, 120px) 0;
-  color: #fff;
+
+  /* 白ベール前提なので文字はネイビー系 */
+  color: #0d2f57;
 }
 
 body.lp-fnb .lp-fnb-hero::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.32); /* 読みにくければ 0.36〜0.40 */
+
+  /* 黒ベタ禁止：左を白く薄めて、右へフェードアウト */
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.92) 0%,
+    rgba(255,255,255,0.78) 45%,
+    rgba(255,255,255,0.00) 75%
+  );
+
   pointer-events: none;
 }
 
@@ -29,31 +35,18 @@ body.lp-fnb .lp-fnb-hero > *{
   z-index: 1;
 }
 
-/* Inner */
+/* テキスト側を左寄せにするとスクショの雰囲気に寄る */
 body.lp-fnb .lp-fnb-hero__inner{
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  text-align: center;
+  text-align: left;
 }
 
-/* Title */
-body.lp-fnb .lp-fnb-hero__title{
-  font-size: clamp(28px, 3.4vw, 44px);
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  margin: 0 0 14px;
-
-  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
-}
-
-/* Lead */
+/* 白ベールなので text-shadow は弱める/無しでOK */
+body.lp-fnb .lp-fnb-hero__title,
 body.lp-fnb .lp-fnb-hero__lead{
-  max-width: 760px;
-  margin: 0 auto 22px;
-  line-height: 1.85;
-
-  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+  text-shadow: none;
 }
 
 /* CTA wrapper */
