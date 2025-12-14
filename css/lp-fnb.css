@@ -265,3 +265,91 @@ body.lp-fnb .lp-fnb-hero a[href="/contact.html"]:focus-visible{
   outline: 3px solid currentColor;
   outline-offset: 4px;
 }
+
+/* =========================
+   HERO：背景画像 + 薄いオーバーレイ（復元）
+   ========================= */
+
+body.lp-fnb .lp-fnb-hero{
+  position: relative;
+
+  /* 背景に hero.webp を使う */
+  background-image: url("/assets/lp-fnb/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* HEROの高さと余白（崩れにくい） */
+  padding: clamp(56px, 8vw, 110px) 0;
+}
+
+/* 薄いオーバーレイ */
+body.lp-fnb .lp-fnb-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* “薄め”の暗幕。読めないなら 0.32→0.40 に上げる */
+  background: rgba(0,0,0,0.32);
+  pointer-events: none;
+}
+
+/* HEROの中身はオーバーレイより上に */
+body.lp-fnb .lp-fnb-hero > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* テキストの読みやすさ（背景の上に乗る前提） */
+body.lp-fnb .lp-fnb-hero{
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+/* 中身の横幅を制限（中央寄せ） */
+body.lp-fnb .lp-fnb-hero h1,
+body.lp-fnb .lp-fnb-hero p{
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+body.lp-fnb .lp-fnb-hero h1{
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+body.lp.fnb .lp-fnb-hero p{
+  line-height: 1.85;
+  margin: 0 0 18px;
+}
+
+/* CTA（/contact.html へのリンクをボタン化） */
+body.lp-fnb .lp-fnb-hero a[href="/contact.html"]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px auto 0;
+  padding: 14px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+
+  /* 背景が暗いので、ボタンは明るめ */
+  background: rgba(255,255,255,0.92);
+  color: #111;
+
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body.lp-fnb .lp-fnb-hero a[href="/contact.html"]:hover{
+  background: rgba(255,255,255,1);
+}
+
+body.lp-fnb .lp-fnb-hero a[href="/contact.html"]:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.95);
+  outline-offset: 4px;
+}
