@@ -1,6 +1,7 @@
 /* =========================================================
-   LP FNB - HERO（HTMLに一致させる）
+   LP FNB - HERO（lp-fnb.html の実HTMLに一致）
    仕様: 背景画像 + 薄いオーバーレイ
+   ※CTAは共通CSSに依存しない（LP内だけで完結）
    ========================================================= */
 
 body.lp-fnb .lp-fnb-hero{
@@ -19,7 +20,7 @@ body.lp-fnb .lp-fnb-hero::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.32);
+  background: rgba(0,0,0,0.32); /* 読みにくければ 0.36〜0.40 */
   pointer-events: none;
 }
 
@@ -42,6 +43,7 @@ body.lp-fnb .lp-fnb-hero__title{
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin: 0 0 14px;
+
   text-shadow: 0 2px 10px rgba(0,0,0,0.28);
 }
 
@@ -50,15 +52,17 @@ body.lp-fnb .lp-fnb-hero__lead{
   max-width: 760px;
   margin: 0 auto 22px;
   line-height: 1.85;
+
   text-shadow: 0 2px 10px rgba(0,0,0,0.28);
 }
 
-/* CTA（共通.btn依存をLP内で断ち切る） */
+/* CTA wrapper */
 body.lp-fnb .lp-fnb-hero__cta{
   margin-top: 12px;
   text-align: center;
 }
 
+/* CTA button（共通 .btn に依存させない：LPのCTA箱の中だけ再定義） */
 body.lp-fnb .lp-fnb-hero__cta a{
   display: inline-flex;
   align-items: center;
@@ -79,7 +83,9 @@ body.lp-fnb .lp-fnb-hero__cta a{
   box-shadow: none;
 }
 
-body.lp-fnb .lp-fnb-hero__cta a:hover{ background: #fff; }
+body.lp-fnb .lp-fnb-hero__cta a:hover{
+  background: #fff;
+}
 
 body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
   outline: 3px solid rgba(255,255,255,0.95);
