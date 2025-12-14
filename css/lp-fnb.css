@@ -100,3 +100,39 @@ body.lp-fnb .lp-fnb-hero__lead{
 body.lp-fnb .lp-fnb-hero__cta{
   margin-top: 10px;
 }
+
+/* =========================================================
+   LP Buttons (NO dependency on .btn / styles.css)
+   ========================================================= */
+
+body.lp-fnb .lp-fnb-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+body.lp-fnb .lp-fnb-btn--primary{
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+body.lp-fnb .lp-fnb-btn--primary:hover{
+  background: #fff;
+}
+
+body.lp-fnb .lp-fnb-btn--primary:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.95);
+  outline-offset: 4px;
+}
