@@ -1,56 +1,8 @@
 /* =========================================================
-   lp-fnb.css（LP専用 / styles.cssに依存しない方針）
-   Scope: body.lp-fnb
+   LP FNB HERO (isolated)
+   Spec: background + thin overlay
    ========================================================= */
 
-/* ---- LP base (いまHTML直書きの指定をCSSへ移す：値は同じ) ---- */
-body.lp-fnb{
-  letter-spacing: 0.3em;
-  line-height: 1.7;
-}
-
-/* 画像事故防止 */
-body.lp-fnb img{ max-width:100%; height:auto; }
-
-/* =========================================================
-   LP Button（共通.btn依存を捨てる）
-   ========================================================= */
-body.lp-fnb .lp-fnb-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 14px 22px;
-  border-radius: 999px;
-
-  text-decoration: none;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-
-  /* 透明や消失の事故を防ぐ（構造で確定） */
-  opacity: 1;
-  visibility: visible;
-}
-
-body.lp-fnb .lp-fnb-btn--primary{
-  background: rgba(255,255,255,0.95);
-  color: #111;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
-body.lp-fnb .lp-fnb-btn--primary:hover{
-  background: #fff;
-}
-
-body.lp-fnb .lp-fnb-btn--primary:focus-visible{
-  outline: 3px solid rgba(255,255,255,0.95);
-  outline-offset: 4px;
-}
-
-/* =========================================================
-   HERO（背景 + 薄いオーバーレイ：仕様固定）
-   ========================================================= */
 body.lp-fnb .lp-fnb-hero{
   position: relative;
 
@@ -64,75 +16,73 @@ body.lp-fnb .lp-fnb-hero{
 }
 
 body.lp-fnb .lp-fnb-hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
+  content: "";
+  position: absolute;
+  inset: 0;
 
-  /* 「薄くなる状態」を安定して作る。必要なら 0.40→0.45 */
+  /* ひろさんの「薄くなる状態」を優先。必要なら 0.32→0.38〜0.45 */
   background: rgba(0,0,0,0.40);
-  pointer-events:none;
+
+  pointer-events: none;
 }
 
-body.lp-fnb .lp-fnb-hero__inner{
+body.lp-fnb .lp-fnb-hero > *{
   position: relative;
   z-index: 1;
+}
 
+body.lp-fnb .lp-fnb-hero-inner{
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
 }
 
-body.lp-fnb .lp-fnb-hero__title{
+body.lp-fnb .lp-fnb-hero-title{
   font-size: clamp(28px, 3.4vw, 44px);
   line-height: 1.2;
+  letter-spacing: 0.02em;
   margin: 0 0 14px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.28);
 }
 
-body.lp-fnb .lp-fnb-hero__lead{
+body.lp-fnb .lp-fnb-hero-tagline{
+  margin: 0 0 14px;
+  letter-spacing: 0.14em;
+  opacity: 0.9;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+body.lp-fnb .lp-fnb-hero-subcopy{
   max-width: 760px;
   margin: 0 auto 22px;
   line-height: 1.85;
   text-shadow: 0 2px 10px rgba(0,0,0,0.28);
 }
 
-body.lp-fnb .lp-fnb-hero__cta{
-  margin-top: 10px;
-}
-
-/* =========================================================
-   LP Buttons (NO dependency on .btn / styles.css)
-   ========================================================= */
-
-body.lp-fnb .lp-fnb-btn{
+body.lp-fnb .lp-fnb-hero-cta{
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
+  margin: 10px auto 0;
   padding: 14px 22px;
   border-radius: 999px;
+
+  background: rgba(255,255,255,0.95);
+  color: #111;
 
   text-decoration: none;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
-
-  opacity: 1;
-  visibility: visible;
 }
 
-body.lp-fnb .lp-fnb-btn--primary{
-  background: rgba(255,255,255,0.95);
-  color: #111;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
-body.lp-fnb .lp-fnb-btn--primary:hover{
+body.lp-fnb .lp-fnb-hero-cta:hover{
   background: #fff;
 }
 
-body.lp-fnb .lp-fnb-btn--primary:focus-visible{
+body.lp-fnb .lp-fnb-hero-cta:focus-visible{
   outline: 3px solid rgba(255,255,255,0.95);
   outline-offset: 4px;
 }
