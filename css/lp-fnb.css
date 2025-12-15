@@ -465,26 +465,17 @@ body.lp-fnb .lp-fnb-plans__item ul{
   line-height: 1.85;
 }
 
-/* おすすめ（B）を強調：やりすぎない上品さ */
+/* おすすめプラン：上部に安全な余白を確保 */
 body.lp-fnb .lp-fnb-plans__item.highlight{
-  border-color: rgba(47,130,233,0.55);
-  background: linear-gradient(180deg, #f6fbff 0%, #ffffff 65%);
-  position: relative;
+  padding-top: 48px; /* ← バッジ専用レーン */
 }
 
+/* バッジ位置を微調整 */
 body.lp-fnb .lp-fnb-plans__item.highlight::before{
-  content: "おすすめ";
-  position: absolute;
   top: 14px;
   right: 14px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(47,130,233,0.12);
-  color: #11529f;
-  letter-spacing: 0.06em;
 }
+
 
 
 /* =====================================================
