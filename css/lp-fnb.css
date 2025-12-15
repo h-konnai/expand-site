@@ -1,4 +1,29 @@
-html { background: #ff0 !important; }
+/* =========================
+   LP-FNB Base (必須)
+   ========================= */
+body.lp-fnb{
+  margin: 0;
+  background: #fff;          /* 黄色テストの下地を隠す */
+  color: #12417B;
+}
+
+body.lp-fnb section,
+body.lp-fnb .lp-fnb-mid-cta{
+  width: 100%;
+}
+
+body.lp-fnb .lp-fnb-hero__inner,
+body.lp-fnb .lp-fnb-gaps,
+body.lp-fnb .lp-fnb-features,
+body.lp-fnb .lp-fnb-future,
+body.lp-fnb .lp-fnb-plans,
+body.lp-fnb .lp-fnb-cases,
+body.lp-fnb .lp-fnb-faq,
+body.lp-fnb .lp-fnb-final-cta{
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(56px, 7vw, 96px) 16px;
+}
 
 
 
