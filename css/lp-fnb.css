@@ -324,7 +324,45 @@ body.lp-fnb .lp-fnb-features__item p{
     aspect-ratio: 16 / 11;
   }
 }
+/* ---- 途中CTA（HTMLにある前提） ---- */
+body.lp-fnb .lp-fnb-mid-cta{
+  text-align: center;
+  border-top: 1px solid #e5e9f2;
+  border-bottom: 1px solid #e5e9f2;
+  background: #f8fbff;
+}
 
+body.lp-fnb .lp-fnb-mid-cta__text{
+  margin: 0 0 16px;
+  color: #444;
+}
+
+body.lp-fnb .lp-fnb-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+body.lp-fnb .lp-fnb-btn--primary{
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #2f82e9;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(47,130,233,0.25);
+  transition: 0.2s ease;
+}
+
+body.lp-fnb .lp-fnb-btn--primary:hover{
+  background: #11529f;
+}
+
+@media (max-width: 767px){
+  body.lp-fnb .lp-fnb-btn--primary{
+    width: 100%;
+  }
+}
 /* =====================================================
    SECTION 4｜90日後の未来
    ===================================================== */
