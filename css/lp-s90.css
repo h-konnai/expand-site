@@ -1,70 +1,93 @@
 /* =========================
-  Starter-90 LP
+  Starter-90 LP (S90)
   Scope: body.lp-s90 only
 ========================= */
 
-/* ---- Base ---- */
+/* ---- Tokens ---- */
 body.lp-s90{
+  --s90-text:#0f172a;
+  --s90-muted:rgba(15,23,42,.72);
+  --s90-line:rgba(15,23,42,.10);
+  --s90-card:rgba(255,255,255,1);
+  --s90-bg:rgba(248,250,252,1);
+  --s90-blue:#0c3c78;
+
+  color: var(--s90-text);
+  background: var(--s90-bg);
   line-height: 1.75;
   letter-spacing: .02em;
   text-rendering: optimizeLegibility;
-  color: #111;
-  background: #fff;
 }
 
-/* 共通CSSの影響を受けやすい要素をLP側で再定義 */
+/* ---- Layout base ---- */
+body.lp-s90 section{
+  padding: 64px 0;
+}
+
+body.lp-s90 .container{
+  max-width: 1040px;   /* “LPっぽさ”の土台 */
+}
+
+/* 見出し/段落の基本（共通CSSの癖を薄める） */
 body.lp-s90 h1,
 body.lp-s90 h2,
 body.lp-s90 h3{
   margin: 0 0 12px;
-  line-height: 1.35;
+  line-height: 1.25;
   letter-spacing: .01em;
 }
 
 body.lp-s90 p{
   margin: 0 0 12px;
+  color: var(--s90-muted);
 }
 
-body.lp-s90 ul,
-body.lp-s90 ol{
-  margin: 12px 0;
-  padding-left: 1.2em;
+body.lp-s90 a{
+  color: var(--s90-blue);
+  text-underline-offset: .18em;
 }
 
-/* セクション余白 */
-body.lp-s90 section{
-  padding: 56px 0;
-}
-
-/* ---- HERO ---- */
-body.lp-s90 .lp-s90-hero{
-  padding: 80px 0 64px;
+/* =========================
+  HERO
+========================= */
+body.lp-s90 body.lp-s90 .lp-s90-hero{
+  padding: 84px 0 72px;
   background:
-    radial-gradient(600px 300px at 20% 25%, rgba(12,60,120,.06), transparent 60%),
-    linear-gradient(180deg, rgba(12,60,120,.04), transparent 55%),
+    radial-gradient(760px 380px at 18% 22%, rgba(12,60,120,.08), transparent 62%),
+    linear-gradient(180deg, rgba(12,60,120,.05), transparent 60%),
     #fff;
+  border-bottom: 1px solid var(--s90-line);
 }
 
 body.lp-s90 .lp-s90-hero__eyebrow{
   margin: 0 0 12px;
   font-size: 14px;
-  opacity: .75;
+  color: var(--s90-muted);
 }
 
 body.lp-s90 .lp-s90-hero__title{
-  margin: 0 0 16px;
-  line-height: 1.2;
-  font-size: clamp(26px, 3.2vw, 38px);
+  font-size: clamp(28px, 3.2vw, 40px);
+  margin: 0 0 14px;
+  color: var(--s90-text);
 }
 
 body.lp-s90 .lp-s90-hero__lead{
-  margin: 0 0 24px;
-  opacity: .92;
+  margin: 0 0 22px;
+  max-width: 52rem;
+}
+
+body.lp-s90 .lp-s90-hero__cta{
+  margin: 0 0 12px;
+}
+
+/* ボタン：共通.btnを借りつつ “LP感” を少しだけ */
+body.lp-s90 .lp-s90-btn{
+  border-radius: 999px;
+  padding: 12px 18px;
 }
 
 body.lp-s90 .lp-s90-hero__anchor{
-  text-decoration: underline;
-  text-underline-offset: .18em;
+  font-weight: 600;
 }
 
 /* アンカーずれ対策 */
@@ -72,27 +95,76 @@ body.lp-s90 #steps{
   scroll-margin-top: 96px;
 }
 
-/* ---- Cards共通（Steps/Plans/BA/FAQ） ---- */
-body.lp-s90 .lp-s90-steps__card,
-body.lp-s90 .lp-s90-plans__card,
-body.lp-s90 .lp-s90-ba__col,
-body.lp-s90 .lp-s90-faq__item{
-  border: 1px solid rgba(0,0,0,.10);
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,.04);
+/* =========================
+  Section title feel
+========================= */
+body.lp-s90 .lp-s90-empathy__title,
+body.lp-s90 .lp-s90-overview__title,
+body.lp-s90 .lp-s90-steps__title,
+body.lp-s90 .lp-s90-plans__title,
+body.lp-s90 .lp-s90-ba__title,
+body.lp-s90 .lp-s90-flow__title,
+body.lp-s90 .lp-s90-faq__title{
+  position: relative;
+  padding-left: 12px;
 }
 
-/* ---- EMPATHY ---- */
+body.lp-s90 .lp-s90-empathy__title::before,
+body.lp-s90 .lp-s90-overview__title::before,
+body.lp-s90 .lp-s90-steps__title::before,
+body.lp-s90 .lp-s90-plans__title::before,
+body.lp-s90 .lp-s90-ba__title::before,
+body.lp-s90 .lp-s90-flow__title::before,
+body.lp-s90 .lp-s90-faq__title::before{
+  content:"";
+  position:absolute;
+  left:0; top:.2em;
+  width:4px; height:1.2em;
+  border-radius:999px;
+  background: rgba(12,60,120,.45);
+}
+
+/* =========================
+  Card base (Steps/Plans/BA/FAQ)
+========================= */
+body.lp-s90 body.lp-s90 .lp-s90-steps__card,
+body.lp-s90 body.lp-s90 .lp-s90-plans__card,
+body.lp-s90 body.lp-s90 .lp-s90-ba__col,
+body.lp-s90 body.lp-s90 .lp-s90-faq__item{
+  background: var(--s90-card);
+  border: 1px solid var(--s90-line);
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(15,23,42,.06);
+}
+
+/* =========================
+  EMPATHY
+========================= */
 body.lp-s90 .lp-s90-empathy__list{
-  margin: 16px 0 16px;
+  margin: 18px 0 14px;
+  padding-left: 1.2em;
 }
 
-/* ---- STEPS ---- */
+body.lp-s90 .lp-s90-empathy__closing{
+  margin-top: 10px;
+  color: var(--s90-text);
+}
+
+/* =========================
+  OVERVIEW
+========================= */
+body.lp-s90 .lp-s90-overview__points{
+  margin: 16px 0 10px;
+  padding-left: 1.2em;
+}
+
+/* =========================
+  STEPS
+========================= */
 body.lp-s90 .lp-s90-steps__grid{
   display: grid;
   gap: 16px;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 @media (min-width: 768px){
@@ -109,11 +181,11 @@ body.lp-s90 .lp-s90-steps__head{
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 body.lp-s90 .lp-s90-steps__icon{
-  color: #0c3c78;
+  color: var(--s90-blue);
   display: inline-flex;
 }
 
@@ -123,22 +195,30 @@ body.lp-s90 .lp-s90-steps__icon svg{
   display: block;
 }
 
+body.lp-s90 .lp-s90-steps__cardTitle{
+  margin: 0;
+  font-weight: 700;
+  color: var(--s90-text);
+}
+
 body.lp-s90 .lp-s90-steps__items{
   margin: 10px 0 10px;
+  padding-left: 1.2em;
+  color: var(--s90-muted);
 }
 
 body.lp-s90 .lp-s90-steps__note{
   margin: 0;
-  opacity: .82;
+  color: var(--s90-muted);
 }
 
-/* 図解枠：min-heightは事故るので無し */
+/* 図解 */
 body.lp-s90 .lp-s90-steps__diagram{
-  margin-top: 24px;
+  margin-top: 26px;
 }
 
 body.lp-s90 .lp-s90-steps__timeline{
-  color: #0c3c78;
+  color: var(--s90-blue);
   max-width: 980px;
   margin: 0 auto;
 }
@@ -149,7 +229,9 @@ body.lp-s90 .lp-s90-steps__timeline svg{
   display: block;
 }
 
-/* ---- PLANS ---- */
+/* =========================
+  PLANS
+========================= */
 body.lp-s90 .lp-s90-plans__grid{
   display: grid;
   gap: 16px;
@@ -167,11 +249,16 @@ body.lp-s90 .lp-s90-plans__card{
   position: relative;
 }
 
+body.lp-s90 .lp-s90-plans__card--recommended{
+  border-color: rgba(12,60,120,.28);
+  box-shadow: 0 14px 34px rgba(12,60,120,.12);
+}
+
 body.lp-s90 .lp-s90-plans__badge{
   position: absolute;
   top: 12px;
   right: 12px;
-  color: #0c3c78;
+  color: var(--s90-blue);
   display: inline-flex;
 }
 
@@ -181,13 +268,15 @@ body.lp-s90 .lp-s90-plans__badge svg{
   display: block;
 }
 
-/* ---- BEFORE/AFTER ---- */
+/* =========================
+  BEFORE / AFTER
+========================= */
 body.lp-s90 .lp-s90-ba__mini{
-  margin: 16px 0 24px;
+  margin: 16px 0 22px;
 }
 
 body.lp-s90 .lp-s90-ba__miniSvg{
-  color: #0c3c78;
+  color: var(--s90-blue);
   max-width: 980px;
   margin: 0 auto;
   display: block;
@@ -215,7 +304,27 @@ body.lp-s90 .lp-s90-ba__col{
   padding: 18px;
 }
 
-/* ---- FAQ ---- */
+body.lp-s90 .lp-s90-ba__head{
+  margin: 0 0 10px;
+  color: var(--s90-text);
+}
+
+/* =========================
+  FLOW
+========================= */
+body.lp-s90 .lp-s90-flow__list{
+  margin: 16px 0 12px;
+  padding-left: 1.2em;
+  color: var(--s90-muted);
+}
+
+body.lp-s90 .lp-s90-flow__note{
+  margin-top: 10px;
+}
+
+/* =========================
+  FAQ
+========================= */
 body.lp-s90 .lp-s90-faq__item{
   padding: 12px 14px;
   margin-bottom: 12px;
@@ -223,13 +332,31 @@ body.lp-s90 .lp-s90-faq__item{
 
 body.lp-s90 .lp-s90-faq__q{
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--s90-text);
 }
 
-/* ---- FINAL CTA ---- */
-body.lp-s90 .lp-s90-cta{
-  padding: 72px 0;
+body.lp-s90 .lp-s90-faq__a{
+  color: var(--s90-muted);
 }
+
+/* =========================
+  FINAL CTA
+========================= */
+body.lp-s90 body.lp-s90 .lp-s90-cta{
+  padding: 78px 0;
+  background: #fff;
+  border-top: 1px solid var(--s90-line);
+}
+
+body.lp-s90 .lp-s90-cta__title{
+  font-size: clamp(20px, 2.4vw, 30px);
+}
+
+body.lp-s90 .lp-s90-cta__lead{
+  color: var(--s90-muted);
+}
+
 body.lp-s90 .lp-s90-cta__actions{
   margin-top: 16px;
 }
