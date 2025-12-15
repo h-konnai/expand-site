@@ -122,6 +122,20 @@ body.lp-fnb .site-header .nav a.btn{
     padding: 8px 8px;
   }
 }
+/* =========================
+   LP Header - 透過仕様
+   ========================= */
+body.lp-fnb .site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(255,255,255,0.55); /* ← 透過 */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
 
 /* =====================================================
    LP-FNB｜HERO（背景画像＋左白ベール｜FIX版）
