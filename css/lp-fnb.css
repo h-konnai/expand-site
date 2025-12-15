@@ -84,7 +84,7 @@ body.lp-fnb .site-header .brand{
 
 body.lp-fnb .site-header .logo{
   display: block;
-  height: 34px;     /* ← ここで“デカすぎ”を止める */
+  height: 50px;     /* ← ここで“デカすぎ”を止める */
   width: auto;
 }
 
