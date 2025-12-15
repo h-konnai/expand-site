@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="見える化">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10" cy="10" r="5"/>
+    <path d="M14 14l6 6"/>
+    <path d="M7.8 11.2l1.8-2.2 1.6 1.4 2.8-3.1"/>
+  </g>
+</svg>
