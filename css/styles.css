@@ -17,7 +17,11 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   font-feature-settings:"palt" 1;
-  letter-spacing:0.2em;
+  letter-spacing: normal;
+  }
+/* 本文だけに効かせる */
+.site-main {
+  letter-spacing: 0.02em;
 }
 
 /* Header */
