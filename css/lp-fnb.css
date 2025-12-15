@@ -1,17 +1,29 @@
-/* =========================
-   LP-FNB Base (必須)
-   ========================= */
+/* =====================================================
+   LP-FNB （飲食店向けライトパッケージ）
+   方針：LP単独で崩れない / 既存サイトと干渉しない
+   すべて body.lp-fnb 配下に閉じ込める
+   ===================================================== */
+
+/* ---- Base / Reset（LP内だけ） ---- */
 body.lp-fnb{
   margin: 0;
-  background: #fff;          /* 黄色テストの下地を隠す */
-  color: #12417B;
+  background: #fff;
+  color: #1b1b1f;
+  line-height: 1.85;
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-body.lp-fnb section,
-body.lp-fnb .lp-fnb-mid-cta{
-  width: 100%;
+body.lp-fnb *{ box-sizing: border-box; }
+
+body.lp-fnb img{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* ---- Container（LP共通の横幅） ---- */
 body.lp-fnb .lp-fnb-hero__inner,
 body.lp-fnb .lp-fnb-gaps,
 body.lp-fnb .lp-fnb-features,
@@ -19,105 +31,388 @@ body.lp-fnb .lp-fnb-future,
 body.lp-fnb .lp-fnb-plans,
 body.lp-fnb .lp-fnb-cases,
 body.lp-fnb .lp-fnb-faq,
-body.lp-fnb .lp-fnb-final-cta{
-  width: min(1120px, 100%);
+body.lp-fnb .lp-fnb-final-cta,
+body.lp-fnb .lp-fnb-mid-cta{
+  max-width: 1040px;
   margin: 0 auto;
-  padding: clamp(56px, 7vw, 96px) 16px;
+  padding: 80px 20px;
 }
 
+@media (max-width: 767px){
+  body.lp-fnb .lp-fnb-hero__inner,
+  body.lp-fnb .lp-fnb-gaps,
+  body.lp-fnb .lp-fnb-features,
+  body.lp-fnb .lp-fnb-future,
+  body.lp-fnb .lp-fnb-plans,
+  body.lp-fnb .lp-fnb-cases,
+  body.lp-fnb .lp-fnb-faq,
+  body.lp-fnb .lp-fnb-final-cta,
+  body.lp-fnb .lp-fnb-mid-cta{
+    padding: 60px 16px;
+  }
+}
 
-
-/* =========================================================
-   LP FNB - HERO（FIX版）
-   方針：左白ベール → 右透明 / 静か・やさしい・押し付けない
-   ========================================================= */
-
+/* =====================================================
+   SECTION 1｜HERO
+   ===================================================== */
 body.lp-fnb .lp-fnb-hero{
-  position: relative;
-  min-height: 68vh; /* 少し抑える */
-
-  background: url("/assets/lp-fnb/hero.webp") center / cover no-repeat;
-
-  display: flex;
-  align-items: center;
-
-  color: #12417B; /* EXPANDブルー寄り */
-  overflow: hidden;
+  background: #f4f8ff;
+  border-bottom: 1px solid #e5e9f2;
 }
 
-/* 左白 → 右透明 のベール（白すぎない） */
-body.lp-fnb .lp-fnb-hero::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,0.88) 0%,
-    rgba(255,255,255,0.70) 42%,
-    rgba(255,255,255,0.00) 75%
-  );
-  pointer-events: none;
-}
-
-/* 中身 */
 body.lp-fnb .lp-fnb-hero__inner{
-  position: relative;
-  z-index: 1;
-
-  max-width: 960px;
-  margin: 0 auto 0 0;
-
-  padding: 0 clamp(16px, 3vw, 24px)
-           0 clamp(24px, 6vw, 96px);
-
-  text-align: left;
+  padding-top: 88px;
+  padding-bottom: 88px;
 }
 
-/* タイトル（強すぎない） */
 body.lp-fnb .lp-fnb-hero__title{
-  font-size: clamp(26px, 3vw, 36px);
-  line-height: 1.6;
-  font-weight: 500; /* ← 700 → 500 */
-  margin-bottom: 16px;
-
-  letter-spacing: 0.04em;
+  font-size: clamp(24px, 4.2vw, 32px);
+  line-height: 1.7;
+  margin: 0 0 24px;
+  font-weight: 700;
+  color: #0c3c78;
+  letter-spacing: 0.03em;
 }
 
-/* リード文（安心感重視） */
 body.lp-fnb .lp-fnb-hero__lead{
-  max-width: 40em;
+  font-size: 16px;
   line-height: 1.9;
-  margin-bottom: 28px;
-
-  font-size: 15px;
-  color: rgba(18,65,123,0.9);
+  color: #444;
+  margin: 0 0 32px;
+  letter-spacing: 0.02em;
 }
 
-/* CTA（“置いてある”感じ） */
+/* CTA：HTMLに合わせて「中のa」をボタン化 */
 body.lp-fnb .lp-fnb-hero__cta a{
-  all: unset;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  padding: 12px 26px;
+  padding: 14px 28px;
+  font-size: 16px;
   border-radius: 999px;
+  background: #2f82e9;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(47,130,233,0.25);
+  transition: 0.2s ease;
+}
 
-  background: rgba(255,255,255,0.96);
-  color: #12417B;
-
-  font-size: 14px;
-  font-weight: 600; /* ボタンだけ少し強め */
-  line-height: 1;
-  white-space: nowrap;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  cursor: pointer;
+body.lp-fnb .lp-fnb-hero__cta a:hover{
+  background: #11529f;
+  box-shadow: 0 3px 10px rgba(17,82,159,0.25);
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
-  outline: 3px solid rgba(18,65,123,0.35);
+  outline: 3px solid rgba(47,130,233,0.35);
   outline-offset: 4px;
+}
+
+@media (max-width: 767px){
+  body.lp-fnb .lp-fnb-hero__cta a{
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   SECTION 2｜伸ばせるポイント
+   ===================================================== */
+body.lp-fnb .lp-fnb-gaps__title{
+  font-size: 26px;
+  margin: 0 0 20px;
+  font-weight: 700;
+  color: #0c3c78;
+}
+
+body.lp-fnb .lp-fnb-gaps__lead{
+  font-size: 16px;
+  color: #444;
+  margin: 0 0 28px;
+}
+
+body.lp-fnb .lp-fnb-gaps__list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+body.lp-fnb .lp-fnb-gaps__list li{
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+body.lp-fnb .lp-fnb-gaps__list li::before{
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: #2f82e9;
+}
+
+body.lp-fnb .lp-fnb-gaps__close{
+  font-size: 15px;
+  line-height: 1.9;
+  color: #444;
+  margin: 0;
+}
+
+/* =====================================================
+   SECTION 3｜できること（3つ）
+   ===================================================== */
+body.lp-fnb .lp-fnb-features__title{
+  font-size: 26px;
+  margin: 0 0 20px;
+  font-weight: 700;
+  color: #0c3c78;
+}
+
+body.lp-fnb .lp-fnb-features__lead{
+  margin: 0 0 32px;
+  color: #444;
+}
+
+body.lp-fnb .lp-fnb-features__items{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px){
+  body.lp-fnb .lp-fnb-features__items{
+    grid-template-columns: 1fr;
+  }
+}
+
+body.lp-fnb .lp-fnb-features__item{
+  padding: 20px;
+  border: 1px solid #e4e9f3;
+  border-radius: 12px;
+  background: #fff;
+  line-height: 1.8;
+  transition: 0.2s ease;
+}
+
+body.lp-fnb .lp-fnb-features__item:hover{
+  border-color: #c8d8f8;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+body.lp-fnb .lp-fnb-features__item h3{
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: #0c3c78;
+}
+
+body.lp-fnb .lp-fnb-features__media{
+  margin: 0 0 14px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ---- 途中CTA（HTMLにある前提） ---- */
+body.lp-fnb .lp-fnb-mid-cta{
+  text-align: center;
+  border-top: 1px solid #e5e9f2;
+  border-bottom: 1px solid #e5e9f2;
+  background: #f8fbff;
+}
+
+body.lp-fnb .lp-fnb-mid-cta__text{
+  margin: 0 0 16px;
+  color: #444;
+}
+
+body.lp-fnb .lp-fnb-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+body.lp-fnb .lp-fnb-btn--primary{
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #2f82e9;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(47,130,233,0.25);
+  transition: 0.2s ease;
+}
+
+body.lp-fnb .lp-fnb-btn--primary:hover{
+  background: #11529f;
+}
+
+@media (max-width: 767px){
+  body.lp-fnb .lp-fnb-btn--primary{
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   SECTION 4｜90日後の未来
+   ===================================================== */
+body.lp-fnb .lp-fnb-future__title{
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 28px;
+  color: #0c3c78;
+}
+
+body.lp-fnb .lp-fnb-future__cols{
+  display: flex;
+  gap: 32px;
+}
+
+@media (max-width: 900px){
+  body.lp-fnb .lp-fnb-future__cols{
+    flex-direction: column;
+  }
+}
+
+body.lp-fnb .lp-fnb-future__col{
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e4e9f3;
+  border-radius: 12px;
+}
+
+body.lp-fnb .lp-fnb-future__col h3{
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: #11529f;
+}
+
+body.lp-fnb .lp-fnb-future__col ul{
+  padding-left: 1em;
+  margin: 0;
+}
+
+body.lp-fnb .lp-fnb-future__col li{
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   SECTION 5｜料金プラン
+   ===================================================== */
+body.lp-fnb .lp-fnb-plans__lead{
+  text-align: center;
+  margin: 0 0 32px;
+  color: #444;
+}
+
+body.lp-fnb .lp-fnb-plans__items{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px){
+  body.lp-fnb .lp-fnb-plans__items{
+    grid-template-columns: 1fr;
+  }
+}
+
+body.lp-fnb .lp-fnb-plans__item{
+  padding: 20px;
+  border: 1px solid #e4e9f3;
+  border-radius: 12px;
+  background: #fff;
+}
+
+body.lp-fnb .lp-fnb-plans__item.highlight{
+  border-color: #2f82e9;
+  background: #f0f6ff;
+}
+
+body.lp-fnb .lp-fnb-plans__item h3{
+  font-size: 18px;
+  margin: 0 0 12px;
+  color: #0c3c78;
+}
+
+body.lp-fnb .lp-fnb-plans__item ul{
+  padding-left: 1em;
+  margin: 0;
+}
+
+/* =====================================================
+   SECTION 6｜事例
+   ===================================================== */
+body.lp-fnb .lp-fnb-cases__lead{
+  margin: 0 0 24px;
+  color: #444;
+}
+
+body.lp-fnb .lp-fnb-cases__media{
+  margin: 0 0 18px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.lp-fnb .lp-fnb-cases__block{
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e4e9f3;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   SECTION 7｜Q&A
+   ===================================================== */
+body.lp-fnb .lp-fnb-faq__item{
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e4e9f3;
+}
+
+body.lp-fnb .lp-fnb-faq__item h3{
+  font-size: 17px;
+  margin: 0 0 8px;
+  color: #0c3c78;
+}
+
+/* =====================================================
+   SECTION 8｜最終CTA
+   ===================================================== */
+body.lp-fnb .lp-fnb-final-cta{
+  text-align: center;
+  background: #f4f8ff;
+  border-top: 1px solid #e5e9f2;
+}
+
+body.lp-fnb .lp-fnb-final-cta h2{
+  font-size: 26px;
+  margin: 0 0 20px;
+  color: #0c3c78;
+}
+
+body.lp-fnb .lp-fnb-final-cta a{
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: #2f82e9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+body.lp-fnb .lp-fnb-final-cta a:hover{
+  background: #11529f;
+}
+
+@media (max-width: 767px){
+  body.lp-fnb .lp-fnb-final-cta a{
+    width: 100%;
+  }
 }
 
