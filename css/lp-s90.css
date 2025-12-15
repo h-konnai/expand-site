@@ -179,3 +179,23 @@ body.lp-s90 .lp-s90-cta {
 body.lp-s90 .lp-s90-cta__actions {
   margin-top: 16px;
 }
+
+/* =========================
+  HERO背景：極薄テクスチャ
+  画像不使用／容量0
+  任意（不要なら削除可）
+========================= */
+body.lp-s90 .lp-s90-hero {
+  background:
+    radial-gradient(
+      600px 300px at 20% 25%,
+      rgba(12, 60, 120, 0.06),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(12, 60, 120, 0.04),
+      transparent 55%
+    ),
+    #fff;
+}
