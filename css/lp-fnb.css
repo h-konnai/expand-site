@@ -805,3 +805,25 @@ body.lp-fnb .site-footer .copy{
   font-size: 12px;
   color: rgba(27,27,31,0.5);
 }
+
+/* ヘッダー全体 */
+body.lp-fnb .site-header{
+  padding: 18px 24px;
+}
+
+/* ロゴを主役に */
+body.lp-fnb .site-header .logo{
+  height: 56px;
+  width: auto;
+}
+
+/* ナビを控えめに */
+body.lp-fnb .site-header .nav a{
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* CTAだけは残す */
+body.lp-fnb .site-header .nav .btn{
+  opacity: 1;
+}
