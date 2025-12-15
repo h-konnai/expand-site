@@ -199,3 +199,16 @@ body.lp-s90 .lp-s90-hero {
     ),
     #fff;
 }
+/* 90日タイムライン（SVGインライン） */
+body.lp-s90 .lp-s90-steps__timeline {
+  color: #0c3c78;          /* EXPAND Blue */
+  max-width: 980px;
+  margin: 24px auto 0;
+}
+
+body.lp-s90 .lp-s90-steps__timeline svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
