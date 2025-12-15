@@ -90,3 +90,19 @@ body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
   outline: 3px solid rgba(18,65,123,0.35);
   outline-offset: 4px;
 }
+
+body.lp-fnb {
+  letter-spacing: 0.08em;
+  line-height: 1.75;
+}
+
+body.lp-fnb .lp-fnb-hero__title {
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+body.lp-fnb .lp-fnb-hero__lead,
+body.lp-fnb p {
+  letter-spacing: 0.06em;
+  line-height: 1.85;
+}
