@@ -1,0 +1,181 @@
+/* =========================
+  Starter-90 LP
+  Scope: body.lp-s90 only
+========================= */
+
+body.lp-s90 {
+  /* LP側で再定義（共通CSSの影響を切る） */
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+}
+
+/* 余白の基準（必要なら調整） */
+body.lp-s90 section {
+  padding: 56px 0;
+}
+
+/* 共通UIは借りる。上書きはLPスコープ内のみ */
+body.lp-s90 .lp-s90-btn {
+  /* ここにLPのボタン微調整を書く（必要が出たら） */
+}
+
+/* -------------------------
+  HERO
+------------------------- */
+body.lp-s90 .lp-s90-hero {
+  padding: 72px 0 64px;
+}
+
+body.lp-s90 .lp-s90-hero__eyebrow {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+body.lp-s90 .lp-s90-hero__title {
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+body.lp-s90 .lp-s90-hero__lead {
+  margin: 0 0 24px;
+}
+
+body.lp-s90 .lp-s90-hero__cta {
+  margin: 0 0 16px;
+}
+
+body.lp-s90 .lp-s90-hero__subnav {
+  margin-top: 8px;
+}
+
+body.lp-s90 .lp-s90-hero__anchor {
+  text-decoration: underline;
+}
+
+/* アンカーずれ対策（固定ヘッダー等がある場合に有効） */
+body.lp-s90 #steps {
+  scroll-margin-top: 96px;
+}
+
+/* -------------------------
+  EMPATHY
+------------------------- */
+body.lp-s90 .lp-s90-empathy__list {
+  margin: 16px 0 16px;
+  padding-left: 1.2em;
+}
+
+/* -------------------------
+  STEPS
+------------------------- */
+body.lp-s90 .lp-s90-steps__grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  body.lp-s90 .lp-s90-steps__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body.lp-s90 .lp-s90-steps__card {
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 12px;
+}
+
+body.lp-s90 .lp-s90-steps__diagram {
+  margin-top: 24px;
+  /* 図解を入れる前提の枠 */
+  min-height: 80px;
+}
+
+/* -------------------------
+  PLANS
+------------------------- */
+body.lp-s90 .lp-s90-plans__grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  body.lp-s90 .lp-s90-plans__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+body.lp-s90 .lp-s90-plans__card {
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 12px;
+  position: relative;
+}
+
+body.lp-s90 .lp-s90-plans__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 999px;
+}
+
+/* -------------------------
+  BEFORE / AFTER
+------------------------- */
+body.lp-s90 .lp-s90-ba__grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  body.lp-s90 .lp-s90-ba__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body.lp-s90 .lp-s90-ba__col {
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 12px;
+}
+
+/* -------------------------
+  FLOW
+------------------------- */
+body.lp-s90 .lp-s90-flow__list {
+  margin: 16px 0 12px;
+  padding-left: 1.2em;
+}
+
+/* -------------------------
+  FAQ
+------------------------- */
+body.lp-s90 .lp-s90-faq__item {
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+body.lp-s90 .lp-s90-faq__q {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* -------------------------
+  FINAL CTA
+------------------------- */
+body.lp-s90 .lp-s90-cta {
+  padding: 72px 0;
+}
+
+body.lp-s90 .lp-s90-cta__actions {
+  margin-top: 16px;
+}
