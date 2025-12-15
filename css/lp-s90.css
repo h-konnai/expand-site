@@ -3,45 +3,42 @@
   Scope: body.lp-s90 only
 ========================= */
 
+/* ---- Base ---- */
 body.lp-s90{
-  line-height: 1.7;
+  line-height: 1.75;
   letter-spacing: .02em;
   text-rendering: optimizeLegibility;
-  /* LP基準色（SVG currentColorの親にもなる） */
   color: #111;
+  background: #fff;
 }
 
-/* sectionの余白は統一、ただしHERO/CTAは上書き */
-body.lp-s90 section{
-  padding: 56px 0;
-}
-
-/* 文字の基本整理（共通CSSの影響を受けても破綻しない最低限） */
+/* 共通CSSの影響を受けやすい要素をLP側で再定義 */
 body.lp-s90 h1,
 body.lp-s90 h2,
 body.lp-s90 h3{
-  letter-spacing: .01em;
-}
-
-body.lp-s90 h2{
   margin: 0 0 12px;
   line-height: 1.35;
+  letter-spacing: .01em;
 }
 
 body.lp-s90 p{
   margin: 0 0 12px;
 }
 
-/* 共通UIは借りる。上書きはLPスコープ内のみ */
-body.lp-s90 .lp-s90-btn{}
+body.lp-s90 ul,
+body.lp-s90 ol{
+  margin: 12px 0;
+  padding-left: 1.2em;
+}
 
-/* =========================
-  HERO
-========================= */
+/* セクション余白 */
+body.lp-s90 section{
+  padding: 56px 0;
+}
+
+/* ---- HERO ---- */
 body.lp-s90 .lp-s90-hero{
-  padding: 72px 0 64px;
-
-  /* HERO背景：極薄テクスチャ（容量0） */
+  padding: 80px 0 64px;
   background:
     radial-gradient(600px 300px at 20% 25%, rgba(12,60,120,.06), transparent 60%),
     linear-gradient(180deg, rgba(12,60,120,.04), transparent 55%),
@@ -56,19 +53,13 @@ body.lp-s90 .lp-s90-hero__eyebrow{
 
 body.lp-s90 .lp-s90-hero__title{
   margin: 0 0 16px;
-  line-height: 1.25;
+  line-height: 1.2;
+  font-size: clamp(26px, 3.2vw, 38px);
 }
 
 body.lp-s90 .lp-s90-hero__lead{
   margin: 0 0 24px;
-}
-
-body.lp-s90 .lp-s90-hero__cta{
-  margin: 0 0 16px;
-}
-
-body.lp-s90 .lp-s90-hero__subnav{
-  margin-top: 8px;
+  opacity: .92;
 }
 
 body.lp-s90 .lp-s90-hero__anchor{
@@ -81,29 +72,23 @@ body.lp-s90 #steps{
   scroll-margin-top: 96px;
 }
 
-/* =========================
-  EMPATHY
-========================= */
+/* ---- Cards共通（Steps/Plans/BA/FAQ） ---- */
+body.lp-s90 .lp-s90-steps__card,
+body.lp-s90 .lp-s90-plans__card,
+body.lp-s90 .lp-s90-ba__col,
+body.lp-s90 .lp-s90-faq__item{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.04);
+}
+
+/* ---- EMPATHY ---- */
 body.lp-s90 .lp-s90-empathy__list{
   margin: 16px 0 16px;
-  padding-left: 1.2em;
 }
 
-body.lp-s90 .lp-s90-empathy__closing{
-  margin-top: 12px;
-}
-
-/* =========================
-  OVERVIEW
-========================= */
-body.lp-s90 .lp-s90-overview__points{
-  margin: 16px 0 12px;
-  padding-left: 1.2em;
-}
-
-/* =========================
-  STEPS
-========================= */
+/* ---- STEPS ---- */
 body.lp-s90 .lp-s90-steps__grid{
   display: grid;
   gap: 16px;
@@ -117,13 +102,9 @@ body.lp-s90 .lp-s90-steps__grid{
 }
 
 body.lp-s90 .lp-s90-steps__card{
-  padding: 16px;
-  border: 1px solid rgba(0,0,0,.10);
-  border-radius: 12px;
-  background: #fff;
+  padding: 18px;
 }
 
-/* 見出し横アイコン（インラインSVG前提） */
 body.lp-s90 .lp-s90-steps__head{
   display: flex;
   align-items: center;
@@ -132,7 +113,7 @@ body.lp-s90 .lp-s90-steps__head{
 }
 
 body.lp-s90 .lp-s90-steps__icon{
-  color: #0c3c78; /* EXPAND Blue */
+  color: #0c3c78;
   display: inline-flex;
 }
 
@@ -142,16 +123,8 @@ body.lp-s90 .lp-s90-steps__icon svg{
   display: block;
 }
 
-body.lp-s90 .lp-s90-steps__cardTitle{
-  margin: 0;
-  line-height: 1.35;
-}
-
-/* リストのクラス名を吸収（items/list どちらでも破綻しない） */
-body.lp-s90 .lp-s90-steps__items,
-body.lp-s90 .lp-s90-steps__list{
+body.lp-s90 .lp-s90-steps__items{
   margin: 10px 0 10px;
-  padding-left: 1.2em;
 }
 
 body.lp-s90 .lp-s90-steps__note{
@@ -159,14 +132,13 @@ body.lp-s90 .lp-s90-steps__note{
   opacity: .82;
 }
 
-/* 図解（枠のmin-heightは事故るので撤廃） */
+/* 図解枠：min-heightは事故るので無し */
 body.lp-s90 .lp-s90-steps__diagram{
   margin-top: 24px;
 }
 
-/* 90日タイムライン（SVGインライン） */
 body.lp-s90 .lp-s90-steps__timeline{
-  color: #0c3c78;   /* currentColor */
+  color: #0c3c78;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -177,9 +149,7 @@ body.lp-s90 .lp-s90-steps__timeline svg{
   display: block;
 }
 
-/* =========================
-  PLANS
-========================= */
+/* ---- PLANS ---- */
 body.lp-s90 .lp-s90-plans__grid{
   display: grid;
   gap: 16px;
@@ -193,48 +163,25 @@ body.lp-s90 .lp-s90-plans__grid{
 }
 
 body.lp-s90 .lp-s90-plans__card{
-  padding: 16px;
-  border: 1px solid rgba(0,0,0,.10);
-  border-radius: 12px;
-  background: #fff;
+  padding: 18px;
   position: relative;
 }
 
-/* おすすめバッジ（SVGインライン対応） */
 body.lp-s90 .lp-s90-plans__badge{
   position: absolute;
   top: 12px;
   right: 12px;
-  color: #0c3c78; /* currentColor */
+  color: #0c3c78;
   display: inline-flex;
 }
 
 body.lp-s90 .lp-s90-plans__badge svg{
-  height: 32px; /* 控えめ */
+  height: 32px;
   width: auto;
   display: block;
 }
 
-/* 万一、旧HTML（divおすすめ）が混在しても破綻しない */
-body.lp-s90 .lp-s90-plans__badge:not(svg):not(:has(svg)){
-  font-size: 12px;
-  padding: 4px 8px;
-  border: 1px solid rgba(0,0,0,.20);
-  border-radius: 999px;
-}
-
-body.lp-s90 .lp-s90-plans__name{
-  margin: 0 0 10px;
-}
-
-body.lp-s90 .lp-s90-plans__list{
-  margin: 0;
-  padding-left: 1.2em;
-}
-
-/* =========================
-  BEFORE / AFTER
-========================= */
+/* ---- BEFORE/AFTER ---- */
 body.lp-s90 .lp-s90-ba__mini{
   margin: 16px 0 24px;
 }
@@ -265,43 +212,13 @@ body.lp-s90 .lp-s90-ba__grid{
 }
 
 body.lp-s90 .lp-s90-ba__col{
-  padding: 16px;
-  border: 1px solid rgba(0,0,0,.10);
-  border-radius: 12px;
-  background: #fff;
+  padding: 18px;
 }
 
-body.lp-s90 .lp-s90-ba__head{
-  margin: 0 0 10px;
-}
-
-body.lp-s90 .lp-s90-ba__list{
-  margin: 0;
-  padding-left: 1.2em;
-}
-
-/* =========================
-  FLOW
-========================= */
-body.lp-s90 .lp-s90-flow__list{
-  margin: 16px 0 12px;
-  padding-left: 1.2em;
-}
-
-body.lp-s90 .lp-s90-flow__note{
-  margin-top: 12px;
-  opacity: .82;
-}
-
-/* =========================
-  FAQ
-========================= */
+/* ---- FAQ ---- */
 body.lp-s90 .lp-s90-faq__item{
-  border: 1px solid rgba(0,0,0,.10);
-  border-radius: 12px;
   padding: 12px 14px;
   margin-bottom: 12px;
-  background: #fff;
 }
 
 body.lp-s90 .lp-s90-faq__q{
@@ -309,22 +226,10 @@ body.lp-s90 .lp-s90-faq__q{
   font-weight: 600;
 }
 
-/* detailsの既定マージンを吸収（ブラウザ差分事故防止） */
-body.lp-s90 .lp-s90-faq__item > *{
-  margin-top: 10px;
-}
-
-body.lp-s90 .lp-s90-faq__item > summary{
-  margin-top: 0;
-}
-
-/* =========================
-  FINAL CTA
-========================= */
+/* ---- FINAL CTA ---- */
 body.lp-s90 .lp-s90-cta{
   padding: 72px 0;
 }
-
 body.lp-s90 .lp-s90-cta__actions{
   margin-top: 16px;
 }
