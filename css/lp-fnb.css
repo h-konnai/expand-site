@@ -106,3 +106,106 @@ body.lp-fnb p {
   letter-spacing: 0.12em;
   line-height: 1.85;
 }
+
+/* =========================
+   LP-FNB Base
+   ========================= */
+body.lp-fnb {
+  color: #1b1b1f;
+  background: #ffffff;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+}
+/* LP section base */
+body.lp-fnb section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+@media (max-width: 767px) {
+  body.lp-fnb section {
+    padding: 56px 16px;
+  }
+}
+/* =========================
+   LP-FNB HERO
+   ========================= */
+body.lp-fnb .lp-fnb-hero {
+  position: relative;
+  min-height: 60vh;
+  background: url("/assets/lp-fnb/hero.webp") center center / cover no-repeat;
+  overflow: hidden;
+}
+
+/* オーバーレイ */
+body.lp-fnb .lp-fnb-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.40) 0%,
+    rgba(0,0,0,0.18) 45%,
+    rgba(0,0,0,0.00) 75%
+  );
+}
+
+body.lp-fnb .lp-fnb-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin-left: max(8vw, 40px);
+  margin-right: auto;
+  padding: 96px 24px;
+  color: #ffffff;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  body.lp-fnb .lp-fnb-hero__inner {
+    margin-left: 0;
+    padding: 64px 16px 56px;
+  }
+}
+body.lp-fnb .lp-fnb-hero__title {
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.55;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+body.lp-fnb .lp-fnb-hero__lead {
+  max-width: 42em;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 26px;
+}
+/* HERO CTA */
+body.lp-fnb .lp-fnb-hero__cta {
+  position: relative;
+  z-index: 2;
+}
+
+body.lp-fnb .lp-fnb-hero__cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #0c3c78;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+}
+
+body.lp-fnb .lp-fnb-hero__cta a:hover {
+  background: #11529f;
+}
+
+@media (max-width: 767px) {
+  body.lp-fnb .lp-fnb-hero__cta a {
+    width: 100%;
+  }
+}
