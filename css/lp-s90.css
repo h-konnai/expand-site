@@ -1,362 +1,342 @@
-/* =========================
-  Starter-90 LP (S90)
-  Scope: body.lp-s90 only
-========================= */
+/* ==================================================
+   Starter-90 LP CSS
+   Scope: body.lp-s90 ONLY
+   完全独立・貼り替え前提
+================================================== */
 
-/* ---- Tokens ---- */
-body.lp-s90{
-  --s90-text:#0f172a;
-  --s90-muted:rgba(15,23,42,.72);
-  --s90-line:rgba(15,23,42,.10);
-  --s90-card:rgba(255,255,255,1);
-  --s90-bg:rgba(248,250,252,1);
-  --s90-blue:#0c3c78;
-
-  color: var(--s90-text);
-  background: var(--s90-bg);
-  line-height: 1.75;
-  letter-spacing: .02em;
+/* -------------------------
+   基本リセット（LP内のみ）
+------------------------- */
+body.lp-s90 {
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP",
+               "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  color: #1b1b1f;
+  background: #ffffff;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
   text-rendering: optimizeLegibility;
 }
 
-/* ---- Layout base ---- */
-body.lp-s90 section{
+body.lp-s90 * {
+  box-sizing: border-box;
+}
+
+body.lp-s90 h1,
+body.lp-s90 h2,
+body.lp-s90 h3,
+body.lp-s90 p,
+body.lp-s90 ul,
+body.lp-s90 ol {
+  margin: 0;
+  padding: 0;
+}
+
+body.lp-s90 ul,
+body.lp-s90 ol {
+  padding-left: 1.2em;
+}
+
+body.lp-s90 section {
   padding: 64px 0;
 }
 
-body.lp-s90 .container{
-  max-width: 1040px;   /* “LPっぽさ”の土台 */
+/* container（本サイトを借りるが安全側に寄せる） */
+body.lp-s90 .container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* 見出し/段落の基本（共通CSSの癖を薄める） */
-body.lp-s90 h1,
-body.lp-s90 h2,
-body.lp-s90 h3{
-  margin: 0 0 12px;
-  line-height: 1.25;
-  letter-spacing: .01em;
+/* -------------------------
+   共通テキスト
+------------------------- */
+body.lp-s90 h1 {
+  font-size: clamp(26px, 3.2vw, 36px);
+  line-height: 1.35;
+  font-weight: 600;
 }
 
-body.lp-s90 p{
-  margin: 0 0 12px;
-  color: var(--s90-muted);
+body.lp-s90 h2 {
+  font-size: clamp(22px, 2.6vw, 28px);
+  line-height: 1.4;
+  font-weight: 600;
 }
 
-body.lp-s90 a{
-  color: var(--s90-blue);
-  text-underline-offset: .18em;
+body.lp-s90 h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
-/* =========================
-  HERO
-========================= */
-body.lp-s90 body.lp-s90 .lp-s90-hero{
-  padding: 84px 0 72px;
+body.lp-s90 p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+body.lp-s90 li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* -------------------------
+   HERO
+------------------------- */
+body.lp-s90 .lp-s90-hero {
+  padding: 96px 0 80px;
   background:
-    radial-gradient(760px 380px at 18% 22%, rgba(12,60,120,.08), transparent 62%),
-    linear-gradient(180deg, rgba(12,60,120,.05), transparent 60%),
-    #fff;
-  border-bottom: 1px solid var(--s90-line);
+    radial-gradient(600px 300px at 20% 25%, rgba(12,60,120,.06), transparent 60%),
+    linear-gradient(180deg, rgba(12,60,120,.04), transparent 55%),
+    #ffffff;
 }
 
-body.lp-s90 .lp-s90-hero__eyebrow{
-  margin: 0 0 12px;
-  font-size: 14px;
-  color: var(--s90-muted);
+body.lp-s90 .lp-s90-hero__eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #4b5563;
+  margin-bottom: 12px;
 }
 
-body.lp-s90 .lp-s90-hero__title{
-  font-size: clamp(28px, 3.2vw, 40px);
-  margin: 0 0 14px;
-  color: var(--s90-text);
+body.lp-s90 .lp-s90-hero__title {
+  margin-bottom: 20px;
 }
 
-body.lp-s90 .lp-s90-hero__lead{
-  margin: 0 0 22px;
-  max-width: 52rem;
+body.lp-s90 .lp-s90-hero__lead {
+  max-width: 42em;
+  margin-bottom: 28px;
+  color: #374151;
 }
 
-body.lp-s90 .lp-s90-hero__cta{
-  margin: 0 0 12px;
+body.lp-s90 .lp-s90-hero__cta {
+  margin-bottom: 12px;
 }
 
-/* ボタン：共通.btnを借りつつ “LP感” を少しだけ */
-body.lp-s90 .lp-s90-btn{
+body.lp-s90 .lp-s90-hero__subnav a {
+  font-size: 0.85rem;
+  color: #0c3c78;
+  text-decoration: underline;
+}
+
+/* CTAボタン（本サイトbtnを借りるが視覚を安定させる） */
+body.lp-s90 .lp-s90-btn {
+  display: inline-block;
+  padding: 12px 26px;
   border-radius: 999px;
-  padding: 12px 18px;
-}
-
-body.lp-s90 .lp-s90-hero__anchor{
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
 /* アンカーずれ対策 */
-body.lp-s90 #steps{
+body.lp-s90 #steps {
   scroll-margin-top: 96px;
 }
 
-/* =========================
-  Section title feel
-========================= */
-body.lp-s90 .lp-s90-empathy__title,
-body.lp-s90 .lp-s90-overview__title,
-body.lp-s90 .lp-s90-steps__title,
-body.lp-s90 .lp-s90-plans__title,
-body.lp-s90 .lp-s90-ba__title,
-body.lp-s90 .lp-s90-flow__title,
-body.lp-s90 .lp-s90-faq__title{
-  position: relative;
-  padding-left: 12px;
+/* -------------------------
+   EMPATHY
+------------------------- */
+body.lp-s90 .lp-s90-empathy__title {
+  margin-bottom: 20px;
 }
 
-body.lp-s90 .lp-s90-empathy__title::before,
-body.lp-s90 .lp-s90-overview__title::before,
-body.lp-s90 .lp-s90-steps__title::before,
-body.lp-s90 .lp-s90-plans__title::before,
-body.lp-s90 .lp-s90-ba__title::before,
-body.lp-s90 .lp-s90-flow__title::before,
-body.lp-s90 .lp-s90-faq__title::before{
-  content:"";
-  position:absolute;
-  left:0; top:.2em;
-  width:4px; height:1.2em;
-  border-radius:999px;
-  background: rgba(12,60,120,.45);
+body.lp-s90 .lp-s90-empathy__list {
+  margin-bottom: 20px;
 }
 
-/* =========================
-  Card base (Steps/Plans/BA/FAQ)
-========================= */
-body.lp-s90 body.lp-s90 .lp-s90-steps__card,
-body.lp-s90 body.lp-s90 .lp-s90-plans__card,
-body.lp-s90 body.lp-s90 .lp-s90-ba__col,
-body.lp-s90 body.lp-s90 .lp-s90-faq__item{
-  background: var(--s90-card);
-  border: 1px solid var(--s90-line);
-  border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(15,23,42,.06);
+body.lp-s90 .lp-s90-empathy__item {
+  margin-bottom: 8px;
 }
 
-/* =========================
-  EMPATHY
-========================= */
-body.lp-s90 .lp-s90-empathy__list{
-  margin: 18px 0 14px;
-  padding-left: 1.2em;
+body.lp-s90 .lp-s90-empathy__closing {
+  margin-top: 16px;
+  color: #374151;
 }
 
-body.lp-s90 .lp-s90-empathy__closing{
-  margin-top: 10px;
-  color: var(--s90-text);
+/* -------------------------
+   OVERVIEW
+------------------------- */
+body.lp-s90 .lp-s90-overview__text {
+  max-width: 46em;
+  margin: 16px 0 20px;
 }
 
-/* =========================
-  OVERVIEW
-========================= */
-body.lp-s90 .lp-s90-overview__points{
-  margin: 16px 0 10px;
-  padding-left: 1.2em;
+body.lp-s90 .lp-s90-overview__points {
+  margin-bottom: 16px;
 }
 
-/* =========================
-  STEPS
-========================= */
-body.lp-s90 .lp-s90-steps__grid{
+body.lp-s90 .lp-s90-overview__point {
+  margin-bottom: 6px;
+}
+
+/* -------------------------
+   STEPS
+------------------------- */
+body.lp-s90 .lp-s90-steps__grid {
   display: grid;
-  gap: 16px;
-  margin-top: 18px;
+  gap: 20px;
+  margin-top: 28px;
 }
 
-@media (min-width: 768px){
-  body.lp-s90 .lp-s90-steps__grid{
+@media (min-width: 768px) {
+  body.lp-s90 .lp-s90-steps__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-body.lp-s90 .lp-s90-steps__card{
-  padding: 18px;
+body.lp-s90 .lp-s90-steps__card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px 22px;
+  background: #ffffff;
 }
 
-body.lp-s90 .lp-s90-steps__head{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+body.lp-s90 .lp-s90-steps__cardTitle {
   margin-bottom: 10px;
 }
 
-body.lp-s90 .lp-s90-steps__icon{
-  color: var(--s90-blue);
-  display: inline-flex;
+body.lp-s90 .lp-s90-steps__items li {
+  margin-bottom: 6px;
 }
 
-body.lp-s90 .lp-s90-steps__icon svg{
-  width: 24px;
-  height: 24px;
-  display: block;
+body.lp-s90 .lp-s90-steps__note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
 }
 
-body.lp-s90 .lp-s90-steps__cardTitle{
-  margin: 0;
-  font-weight: 700;
-  color: var(--s90-text);
-}
-
-body.lp-s90 .lp-s90-steps__items{
-  margin: 10px 0 10px;
-  padding-left: 1.2em;
-  color: var(--s90-muted);
-}
-
-body.lp-s90 .lp-s90-steps__note{
-  margin: 0;
-  color: var(--s90-muted);
-}
-
-/* 図解 */
-body.lp-s90 .lp-s90-steps__diagram{
-  margin-top: 26px;
-}
-
-body.lp-s90 .lp-s90-steps__timeline{
-  color: var(--s90-blue);
+/* タイムラインSVG */
+body.lp-s90 .lp-s90-steps__timeline {
+  margin: 32px auto 0;
   max-width: 980px;
-  margin: 0 auto;
+  color: #0c3c78;
 }
 
-body.lp-s90 .lp-s90-steps__timeline svg{
+body.lp-s90 .lp-s90-steps__timeline svg {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* =========================
-  PLANS
-========================= */
-body.lp-s90 .lp-s90-plans__grid{
+/* -------------------------
+   PLANS
+------------------------- */
+body.lp-s90 .lp-s90-plans__grid {
   display: grid;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 20px;
+  margin-top: 28px;
 }
 
-@media (min-width: 768px){
-  body.lp-s90 .lp-s90-plans__grid{
+@media (min-width: 768px) {
+  body.lp-s90 .lp-s90-plans__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-body.lp-s90 .lp-s90-plans__card{
-  padding: 18px;
+body.lp-s90 .lp-s90-plans__card {
   position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  background: #ffffff;
 }
 
-body.lp-s90 .lp-s90-plans__card--recommended{
-  border-color: rgba(12,60,120,.28);
-  box-shadow: 0 14px 34px rgba(12,60,120,.12);
+body.lp-s90 .lp-s90-plans__name {
+  margin-bottom: 12px;
 }
 
-body.lp-s90 .lp-s90-plans__badge{
+body.lp-s90 .lp-s90-plans__list li {
+  margin-bottom: 6px;
+}
+
+body.lp-s90 .lp-s90-plans__badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  color: var(--s90-blue);
-  display: inline-flex;
+  top: 14px;
+  right: 14px;
 }
 
-body.lp-s90 .lp-s90-plans__badge svg{
-  height: 32px;
-  width: auto;
-  display: block;
-}
-
-/* =========================
-  BEFORE / AFTER
-========================= */
-body.lp-s90 .lp-s90-ba__mini{
-  margin: 16px 0 22px;
-}
-
-body.lp-s90 .lp-s90-ba__miniSvg{
-  color: var(--s90-blue);
-  max-width: 980px;
-  margin: 0 auto;
-  display: block;
-}
-
-body.lp-s90 .lp-s90-ba__miniSvg svg{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-body.lp-s90 .lp-s90-ba__grid{
+/* -------------------------
+   BEFORE / AFTER
+------------------------- */
+body.lp-s90 .lp-s90-ba__grid {
   display: grid;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 20px;
+  margin-top: 28px;
 }
 
-@media (min-width: 768px){
-  body.lp-s90 .lp-s90-ba__grid{
+@media (min-width: 768px) {
+  body.lp-s90 .lp-s90-ba__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-body.lp-s90 .lp-s90-ba__col{
-  padding: 18px;
+body.lp-s90 .lp-s90-ba__col {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px 22px;
+  background: #ffffff;
 }
 
-body.lp-s90 .lp-s90-ba__head{
-  margin: 0 0 10px;
-  color: var(--s90-text);
+body.lp-s90 .lp-s90-ba__head {
+  margin-bottom: 10px;
 }
 
-/* =========================
-  FLOW
-========================= */
-body.lp-s90 .lp-s90-flow__list{
-  margin: 16px 0 12px;
-  padding-left: 1.2em;
-  color: var(--s90-muted);
+/* -------------------------
+   FLOW
+------------------------- */
+body.lp-s90 .lp-s90-flow__list {
+  margin: 20px 0 12px;
 }
 
-body.lp-s90 .lp-s90-flow__note{
-  margin-top: 10px;
+body.lp-s90 .lp-s90-flow__item {
+  margin-bottom: 6px;
 }
 
-/* =========================
-  FAQ
-========================= */
-body.lp-s90 .lp-s90-faq__item{
-  padding: 12px 14px;
+body.lp-s90 .lp-s90-flow__note {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* -------------------------
+   FAQ
+------------------------- */
+body.lp-s90 .lp-s90-faq__item {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px 16px;
   margin-bottom: 12px;
+  background: #ffffff;
 }
 
-body.lp-s90 .lp-s90-faq__q{
+body.lp-s90 .lp-s90-faq__q {
   cursor: pointer;
-  font-weight: 700;
-  color: var(--s90-text);
+  font-weight: 600;
 }
 
-body.lp-s90 .lp-s90-faq__a{
-  color: var(--s90-muted);
+body.lp-s90 .lp-s90-faq__a {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #374151;
 }
 
-/* =========================
-  FINAL CTA
-========================= */
-body.lp-s90 body.lp-s90 .lp-s90-cta{
-  padding: 78px 0;
-  background: #fff;
-  border-top: 1px solid var(--s90-line);
+/* -------------------------
+   FINAL CTA
+------------------------- */
+body.lp-s90 .lp-s90-cta {
+  padding: 96px 0;
+  background: #f7f9fc;
 }
 
-body.lp-s90 .lp-s90-cta__title{
-  font-size: clamp(20px, 2.4vw, 30px);
+body.lp-s90 .lp-s90-cta__lead {
+  margin-top: 12px;
+  margin-bottom: 20px;
 }
 
-body.lp-s90 .lp-s90-cta__lead{
-  color: var(--s90-muted);
-}
+/* -------------------------
+   SP調整
+------------------------- */
+@media (max-width: 767px) {
+  body.lp-s90 section {
+    padding: 48px 0;
+  }
 
-body.lp-s90 .lp-s90-cta__actions{
-  margin-top: 16px;
+  body.lp-s90 .lp-s90-hero {
+    padding: 72px 0 64px;
+  }
 }
