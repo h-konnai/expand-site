@@ -103,6 +103,6 @@ body.lp-fnb .lp-fnb-hero__title {
 <!---本文（リード文）--->
 body.lp-fnb .lp-fnb-hero__lead,
 body.lp-fnb p {
-  letter-spacing: 0.06em;
+  letter-spacing: 0.6em;
   line-height: 1.85;
 }
