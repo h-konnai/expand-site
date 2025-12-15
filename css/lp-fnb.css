@@ -465,18 +465,35 @@ body.lp-fnb .lp-fnb-plans__item ul{
   line-height: 1.85;
 }
 
-/* おすすめプラン：上部に安全な余白を確保 */
+/* おすすめバッジを“ちゃんと表示”させる（必須） */
 body.lp-fnb .lp-fnb-plans__item.highlight{
-  padding-top: 48px; /* ← バッジ専用レーン */
+  position: relative;        /* ::before の基準 */
+  padding-top: 48px;         /* バッジ用レーン（これはOK） */
 }
 
-/* バッジ位置を微調整 */
 body.lp-fnb .lp-fnb-plans__item.highlight::before{
+  content: "おすすめ";       /* ← これが無いと出ない */
+  position: absolute;        /* top/right を効かせる */
   top: 14px;
   right: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+
+  background: rgba(47,130,233,0.12);
+  border: 1px solid rgba(47,130,233,0.35);
+  color: #11529f;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
-
-
 
 /* =====================================================
    SECTION 6｜事例
