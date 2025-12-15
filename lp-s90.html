@@ -4,14 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Starter-90（営業DXスターター90）｜株式会社EXPAND</title>
-  <meta name="description" content="営業部隊の頑張りを見える化し、90日・4ステップで営業の土台を整理して『使われ、回る状態』まで一緒につくる実行支援プログラム Starter-90。" />
 
   <!-- 本サイト共通（借りるのはOK） -->
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- LP専用 -->
-  <link rel="stylesheet" href="/css/lp-s90.css?v=20251216-01">
-
+  <!-- LP専用（必ず body.lp-s90 スコープで書く） -->
+  <link rel="stylesheet" href="/css/lp-s90.css?v=20251216-02" />
 </head>
 
 <body class="lp-s90">
@@ -48,11 +46,11 @@
       <h2 class="lp-s90-empathy__title">こんな“感覚”、ありませんか？</h2>
 
       <ul class="lp-s90-empathy__list">
-        <li>営業の実態が、数字でパッと見えない</li>
-        <li>CRMを入れたのに、使い切れていない</li>
-        <li>成果にばらつきがあり、安定しない</li>
-        <li>経験のある人に頼りきりになっている</li>
-        <li>何から手をつけるべきか、判断がむずかしい</li>
+        <li class="lp-s90-empathy__item">営業の実態が、数字でパッと見えない</li>
+        <li class="lp-s90-empathy__item">CRMを入れたのに、使い切れていない</li>
+        <li class="lp-s90-empathy__item">成果にばらつきがあり、安定しない</li>
+        <li class="lp-s90-empathy__item">経験のある人に頼りきりになっている</li>
+        <li class="lp-s90-empathy__item">何から手をつけるべきか、判断がむずかしい</li>
       </ul>
 
       <p class="lp-s90-empathy__closing">
@@ -62,40 +60,38 @@
     </div>
   </section>
 
-  <!-- SECTION 3｜概要 -->
+  <!-- SECTION 3｜サービス概要 -->
   <section class="lp-s90-overview">
     <div class="container lp-s90-overview__inner">
-      <h2>Starter-90 とは</h2>
+      <h2 class="lp-s90-overview__title">Starter-90 とは</h2>
 
-      <p>
+      <p class="lp-s90-overview__text">
         Starter-90 は、短期間で「営業の土台」を整えるプログラムです。<br />
         ツールを入れることがゴールではありません。<br />
         現場で使われ、営業が回る状態まで一緒に進めます。
       </p>
 
       <ul class="lp-s90-overview__points">
-        <li>現状を把握できる</li>
-        <li>再現できる</li>
-        <li>改善できる</li>
+        <li class="lp-s90-overview__point">現状を把握できる</li>
+        <li class="lp-s90-overview__point">再現できる</li>
+        <li class="lp-s90-overview__point">改善できる</li>
       </ul>
 
-      <p>この3つがそろうと、営業は安定しはじめます。</p>
+      <p class="lp-s90-overview__closing">この3つがそろうと、営業は安定しはじめます。</p>
     </div>
   </section>
 
   <!-- SECTION 4｜90日4ステップ -->
   <section class="lp-s90-steps" aria-labelledby="steps">
     <div class="container lp-s90-steps__inner">
-      <h2 id="steps">90日で、ここまで整えます</h2>
+      <h2 class="lp-s90-steps__title" id="steps">90日で、ここまで整えます</h2>
 
       <div class="lp-s90-steps__grid">
-
-        <!-- STEP 1 -->
         <article class="lp-s90-steps__card">
           <div class="lp-s90-steps__head">
-            <span class="lp-s90-steps__icon">
-              <!-- icon-step1.svg -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <span class="lp-s90-steps__icon" aria-hidden="true">
+              <!-- assets/lp-s90/icon-step1.svg (inline) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="見える化">
                 <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="10" cy="10" r="5"/>
                   <path d="M14 14l6 6"/>
@@ -103,22 +99,21 @@
                 </g>
               </svg>
             </span>
-            <h3>STEP1｜W1：現状の見える化</h3>
+            <h3 class="lp-s90-steps__cardTitle">STEP1｜W1：現状の見える化</h3>
           </div>
-          <ul>
+          <ul class="lp-s90-steps__items">
             <li>営業プロセスの整理</li>
             <li>数字の取り方を決定（最小限）</li>
             <li>課題の所在を可視化</li>
           </ul>
-          <p>まずは、何が起きているかを把握します。</p>
+          <p class="lp-s90-steps__note">まずは、何が起きているかを把握します。</p>
         </article>
 
-        <!-- STEP 2 -->
         <article class="lp-s90-steps__card">
           <div class="lp-s90-steps__head">
-            <span class="lp-s90-steps__icon">
-              <!-- icon-step2.svg -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <span class="lp-s90-steps__icon" aria-hidden="true">
+              <!-- assets/lp-s90/icon-step2.svg (inline) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="仕組み化">
                 <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="4" width="7" height="6" rx="2"/>
                   <rect x="14" y="4" width="7" height="6" rx="2"/>
@@ -128,22 +123,21 @@
                 </g>
               </svg>
             </span>
-            <h3>STEP2｜W2–4：仕組み化</h3>
+            <h3 class="lp-s90-steps__cardTitle">STEP2｜W2–4：仕組み化</h3>
           </div>
-          <ul>
+          <ul class="lp-s90-steps__items">
             <li>やること／やらないことを整理</li>
             <li>CRMを現場に合う形へ調整</li>
             <li>続く運用ルールを作成</li>
           </ul>
-          <p>続かない仕組みは作りません。</p>
+          <p class="lp-s90-steps__note">続かない仕組みは作りません。</p>
         </article>
 
-        <!-- STEP 3 -->
         <article class="lp-s90-steps__card">
           <div class="lp-s90-steps__head">
-            <span class="lp-s90-steps__icon">
-              <!-- icon-step3.svg -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <span class="lp-s90-steps__icon" aria-hidden="true">
+              <!-- assets/lp-s90/icon-step3.svg (inline) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="実運用">
                 <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20 12a8 8 0 0 0-14.9-4"/>
                   <path d="M4 8V4h4"/>
@@ -153,22 +147,21 @@
                 </g>
               </svg>
             </span>
-            <h3>STEP3｜W4–8：実運用</h3>
+            <h3 class="lp-s90-steps__cardTitle">STEP3｜W4–8：実運用</h3>
           </div>
-          <ul>
+          <ul class="lp-s90-steps__items">
             <li>週次で状況を確認</li>
             <li>現場運用を伴走支援</li>
             <li>止まりやすい点を先回りで調整</li>
           </ul>
-          <p>回しながら、必要な修正を入れます。</p>
+          <p class="lp-s90-steps__note">回しながら、必要な修正を入れます。</p>
         </article>
 
-        <!-- STEP 4 -->
         <article class="lp-s90-steps__card">
           <div class="lp-s90-steps__head">
-            <span class="lp-s90-steps__icon">
-              <!-- icon-step4.svg -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <span class="lp-s90-steps__icon" aria-hidden="true">
+              <!-- assets/lp-s90/icon-step4.svg (inline) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="定着化">
                 <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 21s6-4.2 6-10a6 6 0 1 0-12 0c0 5.8 6 10 6 10z"/>
                   <circle cx="12" cy="11" r="2"/>
@@ -176,22 +169,102 @@
                 </g>
               </svg>
             </span>
-            <h3>STEP4｜W8–12：定着化</h3>
+            <h3 class="lp-s90-steps__cardTitle">STEP4｜W8–12：定着化</h3>
           </div>
-          <ul>
+          <ul class="lp-s90-steps__items">
             <li>見える形を固定</li>
             <li>再現できる流れに</li>
             <li>次の改善が回る状態へ</li>
           </ul>
-          <p>90日後は自走を目指します。</p>
+          <p class="lp-s90-steps__note">90日後は自走を目指します。</p>
         </article>
-
       </div>
 
-      <!-- タイムラインSVG -->
-      <div class="lp-s90-steps__diagram">
-        <!-- steps-timeline.svg（arrow idはそのまま） -->
-        <!-- ※ 省略せずここにそのまま貼り付けてOK -->
+      <!-- 図解（このセクション下部） -->
+      <figure class="lp-s90-steps__diagram lp-s90-steps__timeline">
+        <!-- assets/lp-s90/steps-timeline.svg (inline) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 180" role="img" aria-label="90日4ステップ：W1 見える化 / W2-4 仕組み化 / W4-8 実運用 / W8-12 定着化">
+          <defs>
+            <style>
+              .t{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;font-size:18px}
+              .s{font-size:14px;opacity:.7}
+            </style>
+            <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+
+          <line x1="90" y1="92" x2="890" y2="92" stroke="currentColor" stroke-width="2" opacity=".35" marker-end="url(#arrow)"/>
+
+          <g fill="white" stroke="currentColor" stroke-width="2">
+            <circle cx="150" cy="92" r="18"/>
+            <circle cx="390" cy="92" r="18"/>
+            <circle cx="630" cy="92" r="18"/>
+            <circle cx="870" cy="92" r="18"/>
+          </g>
+
+          <g class="t" fill="currentColor">
+            <text x="150" y="48" text-anchor="middle">W1</text>
+            <text x="150" y="142" text-anchor="middle">見える化</text>
+
+            <text x="390" y="48" text-anchor="middle">W2-4</text>
+            <text x="390" y="142" text-anchor="middle">仕組み化</text>
+
+            <text x="630" y="48" text-anchor="middle">W4-8</text>
+            <text x="630" y="142" text-anchor="middle">実運用</text>
+
+            <text x="870" y="48" text-anchor="middle">W8-12</text>
+            <text x="870" y="142" text-anchor="middle">定着化</text>
+          </g>
+
+          <text x="90" y="166" class="s" fill="currentColor">90日で「見える化 → 仕組み化 → 実運用 → 定着化」</text>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SECTION 5｜プラン -->
+  <section class="lp-s90-plans">
+    <div class="container lp-s90-plans__inner">
+      <h2 class="lp-s90-plans__title">プラン一覧</h2>
+
+      <div class="lp-s90-plans__grid">
+        <article class="lp-s90-plans__card">
+          <h3 class="lp-s90-plans__name">ライト｜25万円</h3>
+          <ul class="lp-s90-plans__list">
+            <li>現状ヒアリング</li>
+            <li>課題整理</li>
+            <li>改善優先度の提示</li>
+          </ul>
+        </article>
+
+        <article class="lp-s90-plans__card lp-s90-plans__card--recommended">
+          <div class="lp-s90-plans__badge" aria-label="おすすめ">
+            <!-- assets/lp-s90/badge-recommended.svg (inline) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 44" role="img" aria-label="おすすめ">
+              <rect x="2" y="2" width="136" height="40" rx="999" fill="currentColor" opacity=".12"/>
+              <rect x="2" y="2" width="136" height="40" rx="999" fill="none" stroke="currentColor" opacity=".35"/>
+              <text x="70" y="28" text-anchor="middle"
+                    font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans JP',sans-serif"
+                    font-size="16" font-weight="600"
+                    fill="currentColor" opacity=".9">おすすめ</text>
+            </svg>
+          </div>
+          <h3 class="lp-s90-plans__name">スタンダード｜50万円</h3>
+          <ul class="lp-s90-plans__list">
+            <li>90日4ステップ実行支援</li>
+            <li>CRM／運用の型づくり</li>
+            <li>定着まで伴走</li>
+          </ul>
+        </article>
+
+        <article class="lp-s90-plans__card">
+          <h3 class="lp-s90-plans__name">プレミアム｜80万円</h3>
+          <ul class="lp-s90-plans__list">
+            <li>スタンダード内容すべて</li>
+            <li>研修3時間</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -199,39 +272,117 @@
   <!-- SECTION 6｜Before / After -->
   <section class="lp-s90-ba">
     <div class="container lp-s90-ba__inner">
-      <h2>90日後の変化</h2>
+      <h2 class="lp-s90-ba__title">90日後の変化</h2>
 
-      <!-- ba-mini.svg（arrow衝突修正済み） -->
-      <div class="lp-s90-ba__miniSvg">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 220">
+      <div class="lp-s90-ba__mini" aria-label="Before After 図">
+        <!-- assets/lp-s90/ba-mini.svg (inline) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 220" role="img" aria-label="Before Afterの変化">
           <defs>
-            <marker id="arrow-ba" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
-              <path d="M3,3 L12,7 L3,11" fill="none" stroke="currentColor" stroke-width="2"/>
+            <style>
+              .t{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;font-size:18px}
+              .s{font-size:14px;opacity:.75}
+            </style>
+            <marker id="arrow2" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+              <path d="M3,3 L12,7 L3,11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
             </marker>
           </defs>
-          <line x1="450" y1="115" x2="530" y2="115"
-                stroke="currentColor" stroke-width="2"
-                marker-end="url(#arrow-ba)"/>
+
+          <g fill="none" stroke="currentColor" stroke-width="2" opacity=".35">
+            <rect x="60" y="50" width="360" height="130" rx="16"/>
+            <rect x="560" y="50" width="360" height="130" rx="16"/>
+          </g>
+
+          <text x="90" y="85" class="t" fill="currentColor">Before</text>
+          <text x="590" y="85" class="t" fill="currentColor">After</text>
+
+          <g stroke="currentColor" stroke-width="2" opacity=".35" stroke-linecap="round">
+            <line x1="90" y1="115" x2="380" y2="115"/>
+            <line x1="90" y1="145" x2="330" y2="145"/>
+            <line x1="90" y1="175" x2="360" y2="175"/>
+          </g>
+
+          <g stroke="currentColor" stroke-width="2" opacity=".6" stroke-linecap="round">
+            <line x1="590" y1="115" x2="880" y2="115"/>
+            <line x1="590" y1="145" x2="830" y2="145"/>
+            <line x1="590" y1="175" x2="860" y2="175"/>
+          </g>
+
+          <line x1="450" y1="115" x2="530" y2="115" stroke="currentColor" stroke-width="2" opacity=".45" marker-end="url(#arrow2)"/>
+
+          <text x="490" y="150" class="s" fill="currentColor" text-anchor="middle">整えて改善</text>
         </svg>
       </div>
 
       <div class="lp-s90-ba__grid">
         <div class="lp-s90-ba__col">
-          <h3>Before</h3>
-          <ul>
+          <h3 class="lp-s90-ba__head">Before</h3>
+          <ul class="lp-s90-ba__list">
             <li>見えにくい</li>
             <li>属人化しやすい</li>
             <li>安定しない</li>
           </ul>
         </div>
         <div class="lp-s90-ba__col">
-          <h3>After</h3>
-          <ul>
+          <h3 class="lp-s90-ba__head">After</h3>
+          <ul class="lp-s90-ba__list">
             <li>数字で見える</li>
             <li>再現できる</li>
             <li>改善が回る</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7｜導入の流れ -->
+  <section class="lp-s90-flow">
+    <div class="container lp-s90-flow__inner">
+      <h2 class="lp-s90-flow__title">導入までの流れ</h2>
+
+      <ol class="lp-s90-flow__list">
+        <li class="lp-s90-flow__item">無料相談</li>
+        <li class="lp-s90-flow__item">現状ヒアリング</li>
+        <li class="lp-s90-flow__item">プラン決定</li>
+        <li class="lp-s90-flow__item">Starter-90 開始</li>
+      </ol>
+
+      <p class="lp-s90-flow__note">無理な提案はしません。状況に合う形をご案内します。</p>
+    </div>
+  </section>
+
+  <!-- SECTION 8｜FAQ -->
+  <section class="lp-s90-faq">
+    <div class="container lp-s90-faq__inner">
+      <h2 class="lp-s90-faq__title">FAQ</h2>
+
+      <div class="lp-s90-faq__items">
+        <details class="lp-s90-faq__item">
+          <summary class="lp-s90-faq__q">Q. CRMがなくても大丈夫？</summary>
+          <div class="lp-s90-faq__a">A. 現状に合う形から整えます。</div>
+        </details>
+
+        <details class="lp-s90-faq__item">
+          <summary class="lp-s90-faq__q">Q. 忙しくても進められる？</summary>
+          <div class="lp-s90-faq__a">A. 負担最小の形で設計します。</div>
+        </details>
+
+        <details class="lp-s90-faq__item">
+          <summary class="lp-s90-faq__q">Q. 90日後は？</summary>
+          <div class="lp-s90-faq__a">A. 自走できる状態を目指します。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9｜最終CTA -->
+  <section class="lp-s90-cta">
+    <div class="container lp-s90-cta__inner">
+      <h2 class="lp-s90-cta__title">営業は、整えると強くなります。</h2>
+      <p class="lp-s90-cta__lead">まずは現状を一緒に整理しませんか？</p>
+
+      <!-- CTA（2/2） -->
+      <div class="lp-s90-cta__actions">
+        <a class="btn btn-primary lp-s90-btn" href="/contact.html">無料で相談する</a>
       </div>
     </div>
   </section>
