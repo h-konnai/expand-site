@@ -53,54 +53,102 @@ body.lp-fnb .lp-fnb-mid-cta{
 }
 
 /* =====================================================
-   SECTION 1｜HERO
+   LP-FNB｜HERO（背景画像＋左白ベール｜FIX版）
+   方針：
+   ・左：読みやすい白ベール
+   ・右：写真をそのまま見せる
+   ・CTAは画像に自然に乗る
    ===================================================== */
+
 body.lp-fnb .lp-fnb-hero{
-  background: #f4f8ff;
-  border-bottom: 1px solid #e5e9f2;
+  position: relative;
+  min-height: 72vh;
+
+  background-image: url("/assets/lp-fnb/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
 }
 
+/* 左白 → 右透明 のベール */
+body.lp-fnb .lp-fnb-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.92) 0%,
+    rgba(255,255,255,0.78) 40%,
+    rgba(255,255,255,0.30) 60%,
+    rgba(255,255,255,0.00) 78%
+  );
+
+  pointer-events: none;
+}
+
+/* 中身（テキストエリア） */
 body.lp-fnb .lp-fnb-hero__inner{
-  padding-top: 88px;
-  padding-bottom: 88px;
+  position: relative;
+  z-index: 1;
+
+  max-width: 960px;
+  margin-left: clamp(16px, 6vw, 96px);
+  margin-right: auto;
+
+  padding: 96px 20px;
+  text-align: left;
 }
 
+/* タイトル */
 body.lp-fnb .lp-fnb-hero__title{
-  font-size: clamp(24px, 4.2vw, 32px);
-  line-height: 1.7;
-  margin: 0 0 24px;
-  font-weight: 700;
+  font-size: clamp(26px, 3.2vw, 36px);
+  line-height: 1.6;
+  font-weight: 500;
+
+  margin: 0 0 16px;
   color: #0c3c78;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
+/* リード文 */
 body.lp-fnb .lp-fnb-hero__lead{
-  font-size: 16px;
+  max-width: 40em;
+  margin: 0 0 28px;
+
+  font-size: 15px;
   line-height: 1.9;
-  color: #444;
-  margin: 0 0 32px;
-  letter-spacing: 0.02em;
+  color: rgba(12,60,120,0.9);
 }
 
-/* CTA：HTMLに合わせて「中のa」をボタン化 */
+/* CTA（画像の上に“置いてある”感じ） */
 body.lp-fnb .lp-fnb-hero__cta a{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   padding: 14px 28px;
-  font-size: 16px;
   border-radius: 999px;
-  background: #2f82e9;
-  color: #fff;
+
+  background: rgba(255,255,255,0.96);
+  color: #0c3c78;
+
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(47,130,233,0.25);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transition: 0.2s ease;
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:hover{
-  background: #11529f;
-  box-shadow: 0 3px 10px rgba(17,82,159,0.25);
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
@@ -108,11 +156,25 @@ body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
   outline-offset: 4px;
 }
 
+/* --------------------
+   SP（スマホ）
+   -------------------- */
 @media (max-width: 767px){
+  body.lp-fnb .lp-fnb-hero{
+    min-height: 420px;
+    background-position: center top;
+  }
+
+  body.lp-fnb .lp-fnb-hero__inner{
+    margin-left: 0;
+    padding: 72px 16px 64px;
+  }
+
   body.lp-fnb .lp-fnb-hero__cta a{
     width: 100%;
   }
 }
+
 
 /* =====================================================
    SECTION 2｜伸ばせるポイント
