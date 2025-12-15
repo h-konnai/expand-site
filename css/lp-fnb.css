@@ -116,11 +116,8 @@ body.lp-fnb .lp-fnb-hero__cta a{
   cursor: pointer;
 }
 
-body.lp-fnb .lp-fnb-hero__cta a:hover{
-  background: #ffffff;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
+  outline: 3px solid rgba(18,65,123,0.35);
+  outline-offset: 4px;
 }
 
-body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
-  outline: 3px
-｝
