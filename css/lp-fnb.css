@@ -53,6 +53,77 @@ body.lp-fnb .lp-fnb-mid-cta{
 }
 
 /* =====================================================
+   LP-FNB Header（最小構成 / 既存サイトと干渉しない）
+   ===================================================== */
+
+body.lp-fnb .site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e6eefb;
+}
+
+body.lp-fnb .site-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 16px;
+}
+
+body.lp-fnb .site-header .brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+body.lp-fnb .site-header .logo{
+  display: block;
+  height: 34px;     /* ← ここで“デカすぎ”を止める */
+  width: auto;
+}
+
+body.lp-fnb .site-header .nav{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+body.lp-fnb .site-header .nav a{
+  color: rgba(27,27,31,0.78);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+body.lp-fnb .site-header .nav a:hover{
+  background: rgba(12,60,120,0.06);
+}
+
+/* LP内のCTAボタンだけ整える（.btn.small が無くてもOK） */
+body.lp-fnb .site-header .nav a.btn{
+  background: rgba(12,60,120,0.10);
+  color: #0c3c78;
+  font-weight: 600;
+}
+
+/* SP */
+@media (max-width: 767px){
+  body.lp-fnb .site-header{
+    padding: 10px 12px;
+  }
+  body.lp-fnb .site-header .nav a{
+    padding: 8px 8px;
+  }
+}
+
+/* =====================================================
    LP-FNB｜HERO（背景画像＋左白ベール｜FIX版）
    方針：
    ・左：読みやすい白ベール
