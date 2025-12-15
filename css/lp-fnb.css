@@ -216,10 +216,10 @@ body.lp-fnb .lp-fnb-hero__title{
 body.lp-fnb .lp-fnb-hero__lead{
   max-width: 40em;
   margin: 0 0 28px;
-
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(12,60,120,0.9);
+  color: rgba(12,60,120,0.9)
+  letter-spacing: 0.02em;
 }
 
 /* CTA（画像の上に“置いてある”感じ） */
