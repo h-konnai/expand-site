@@ -92,7 +92,7 @@ body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
 }
 <!---「全体」の文字間隔--->
 body.lp-fnb {
-  letter-spacing: 0.8em;
+  letter-spacing: 1.0em;
   line-height: 1.75;
 }
 <!---HERO見出し--->
