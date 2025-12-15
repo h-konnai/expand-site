@@ -1,69 +1,72 @@
 /* =========================================================
-   LP FNB - HERO（ひろさんの理想：左白ベール→右透明）
+   LP FNB - HERO
+   理想：左白ベール → 右透明 / CTAは画像に乗る
    ========================================================= */
 
 body.lp-fnb .lp-fnb-hero{
   position: relative;
+  min-height: 72vh;
 
-  background-image: url("/assets/lp-fnb/hero.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("/assets/lp-fnb/hero.webp") center / cover no-repeat;
 
-  padding: clamp(56px, 8vw, 120px) 0;
+  display: flex;
+  align-items: center;
 
-  /* 理想の文字色（スクショの濃い青） */
-  color: #12417B;
+  color: #12417B; /* 濃い青 */
+  overflow: hidden;
 }
 
+/* 左白 → 右透明 のベール */
 body.lp-fnb .lp-fnb-hero::before{
   content: "";
   position: absolute;
   inset: 0;
-
-  /* 黒ベタ禁止：左を白く薄め、右へフェード */
   background: linear-gradient(
     90deg,
     rgba(255,255,255,0.92) 0%,
     rgba(255,255,255,0.78) 45%,
     rgba(255,255,255,0.00) 75%
   );
-
   pointer-events: none;
 }
 
-body.lp-fnb .lp-fnb-hero{
-  position: relative;
-  min-height: 72vh; /* ← これが重要。画像領域を保証 */
-  display: flex;
-  align-items: center; /* 縦中央 */
-}
-
+/* 中身 */
 body.lp-fnb .lp-fnb-hero__inner{
   position: relative;
   z-index: 1;
-  max-width: 960px;
 
-  /* 中央寄せをやめる */
+  max-width: 960px;
   margin: 0 auto 0 0;
 
-  /* 左の余白を「画面に応じて」出す */
-  padding: 0 clamp(16px, 3vw, 24px) 0 clamp(24px, 6vw, 96px);
+  padding: 0 clamp(16px, 3vw, 24px)
+           0 clamp(24px, 6vw, 96px);
 
   text-align: left;
 }
 
+/* タイトル */
+body.lp-fnb .lp-fnb-hero__title{
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 18px;
 
-
-/* 白ベール前提なので影は不要（濃い青で勝つ） */
-body.lp-fnb .lp-fnb-hero__title,
-body.lp-fnb .lp-fnb-hero__lead{
   text-shadow: none;
 }
 
-/* CTA：この箱の中だけで共通CSSを切る（HTML変更なし） */
+/* リード文 */
+body.lp-fnb .lp-fnb-hero__lead{
+  max-width: 42em;
+  line-height: 1.85;
+  margin-bottom: 26px;
+
+  text-shadow: none;
+}
+
+/* CTA（共通CSS完全遮断） */
 body.lp-fnb .lp-fnb-hero__cta a{
-  all: unset; /* ← 共通 .btn の影響をゼロにする */
+  all: unset;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +77,6 @@ body.lp-fnb .lp-fnb-hero__cta a{
   background: rgba(255,255,255,0.95);
   color: #111;
 
-  text-decoration: none;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
@@ -83,129 +85,26 @@ body.lp-fnb .lp-fnb-hero__cta a{
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:hover{
-  background: #fff;
+  background: #ffffff;
 }
 
 body.lp-fnb .lp-fnb-hero__cta a:focus-visible{
   outline: 3px solid rgba(18,65,123,0.35);
   outline-offset: 4px;
 }
-<!---「全体」の文字間隔--->
-body.lp-fnb {
-  letter-spacing: 0.12em;
-  line-height: 1.75;
-}
-<!---HERO見出し--->
-body.lp-fnb .lp-fnb-hero__title {
-  letter-spacing: 0.12em;
-  line-height: 1.25;
-}
-<!---本文（リード文）--->
-body.lp-fnb .lp-fnb-hero__lead,
-body.lp-fnb p {
-  letter-spacing: 0.12em;
-  line-height: 1.85;
-}
 
-/* =========================
-   LP-FNB Base
-   ========================= */
-body.lp-fnb {
-  color: #1b1b1f;
-  background: #ffffff;
-  line-height: 1.75;
-  letter-spacing: 0.05em;
-}
-/* LP section base */
-body.lp-fnb section {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-@media (max-width: 767px) {
-  body.lp-fnb section {
-    padding: 56px 16px;
+/* SP */
+@media (max-width: 767px){
+  body.lp-fnb .lp-fnb-hero{
+    min-height: 420px;
+    background-position: center top;
   }
-}
-/* =========================
-   LP-FNB HERO
-   ========================= */
-body.lp-fnb .lp-fnb-hero {
-  position: relative;
-  min-height: 60vh;
-  background: url("/assets/lp-fnb/hero.webp") center center / cover no-repeat;
-  overflow: hidden;
-}
 
-/* オーバーレイ */
-body.lp-fnb .lp-fnb-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,0.40) 0%,
-    rgba(0,0,0,0.18) 45%,
-    rgba(0,0,0,0.00) 75%
-  );
-}
-
-body.lp-fnb .lp-fnb-hero__inner {
-  position: relative;
-  z-index: 1;
-  max-width: 1120px;
-  margin-left: max(8vw, 40px);
-  margin-right: auto;
-  padding: 96px 24px;
-  color: #ffffff;
-  text-align: left;
-}
-
-@media (max-width: 767px) {
-  body.lp-fnb .lp-fnb-hero__inner {
-    margin-left: 0;
-    padding: 64px 16px 56px;
+  body.lp-fnb .lp-fnb-hero__inner{
+    padding: 0 16px;
   }
-}
-body.lp-fnb .lp-fnb-hero__title {
-  font-size: clamp(26px, 3.2vw, 40px);
-  line-height: 1.55;
-  margin-bottom: 18px;
-  font-weight: 700;
-}
 
-body.lp-fnb .lp-fnb-hero__lead {
-  max-width: 42em;
-  font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 26px;
-}
-/* HERO CTA */
-body.lp-fnb .lp-fnb-hero__cta {
-  position: relative;
-  z-index: 2;
-}
-
-body.lp-fnb .lp-fnb-hero__cta a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 28px;
-  border-radius: 999px;
-  background: #0c3c78;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  border: none;
-}
-
-body.lp-fnb .lp-fnb-hero__cta a:hover {
-  background: #11529f;
-}
-
-@media (max-width: 767px) {
-  body.lp-fnb .lp-fnb-hero__cta a {
+  body.lp-fnb .lp-fnb-hero__cta a{
     width: 100%;
   }
 }
