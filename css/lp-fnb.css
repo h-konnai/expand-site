@@ -593,3 +593,40 @@ body.lp-fnb .lp-fnb-final-cta a:hover{
   }
 }
 
+/* cases：箇条書きをプロっぽく整える */
+body.lp-fnb .lp-fnb-cases__label{
+  margin: 14px 0 10px;
+  font-weight: 600;
+  color: rgba(17,82,159,0.95);
+}
+
+body.lp-fnb .lp-fnb-cases__list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: grid;
+  gap: 10px;
+}
+
+body.lp-fnb .lp-fnb-cases__list li{
+  position: relative;
+  padding: 10px 12px 10px 38px;
+  border: 1px solid #e6eefb;
+  background: #f7fbff;
+  border-radius: 12px;
+  color: rgba(27,27,31,0.82);
+  line-height: 1.7;
+}
+
+body.lp-fnb .lp-fnb-cases__list li::before{
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: #2f82e9;
+  box-shadow: 0 0 0 4px rgba(47,130,233,0.14);
+}
