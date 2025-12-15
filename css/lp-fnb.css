@@ -125,17 +125,23 @@ body.lp-fnb .site-header .nav a.btn{
 /* =========================
    LP Header - 透過仕様
    ========================= */
+/* LPだけ、ヘッダーを透過＋軽くぼかす */
 body.lp-fnb .site-header{
   position: sticky;
   top: 0;
   z-index: 100;
-
-  background: rgba(255,255,255,0.55); /* ← 透過 */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(230,238,251,0.9);
 }
+
+/* ロゴはCSSでサイズ管理（HTMLのwidth/heightより優先させたいなら） */
+body.lp-fnb .site-header .logo{
+  height: 34px;
+  width: auto;
+}
+
 
 /* =====================================================
    LP-FNB｜HERO（背景画像＋左白ベール｜FIX版）
