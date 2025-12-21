@@ -616,3 +616,31 @@ body.lp-s90 .lp-s90-cta__actions{
     animation:none !important;
   }
 }
+
+/* =========================
+   Header in LP (safe)
+========================= */
+body.lp-s90 .site-header .logo {
+  height: 44px;      /* まずは固定で安全運用 */
+  width: auto;
+}
+
+/* stickyヘッダーが重なる場合の保険 */
+body.lp-s90 .lp-s90-hero {
+  padding-top: 88px; /* ヘッダー分。必要なら増減 */
+}
+
+/* =========================
+   Footer in LP (safe)
+========================= */
+body.lp-s90 .site-footer {
+  margin-top: 64px;
+}
+
+body.lp-s90 .foot-links a {
+  text-decoration: none;
+}
+
+body.lp-s90 .foot-links a:hover {
+  text-decoration: underline;
+}
