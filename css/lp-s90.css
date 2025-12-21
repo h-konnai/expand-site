@@ -644,3 +644,113 @@ body.lp-s90 .foot-links a {
 body.lp-s90 .foot-links a:hover {
   text-decoration: underline;
 }
+/* =========================
+   Header / Footer (LP only)
+   ========================= */
+body.lp-s90 .site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 20px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(15,23,42,.08);
+}
+
+body.lp-s90 .site-header .brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color: inherit;
+}
+
+body.lp-s90 .site-header .logo{
+  height: 48px; /* 本サイト寄せ */
+  width: auto;
+  display:block;
+}
+
+body.lp-s90 .site-header .nav{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+}
+
+body.lp-s90 .site-header .nav a{
+  color: #111827;
+  text-decoration:none;
+  font-size: 14px;
+}
+
+body.lp-s90 .site-header .nav a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ヘッダー右上の小ボタン（本サイトの“お問い合わせ”寄せ） */
+body.lp-s90 .site-header .btn.small{
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 999px;
+  background: #0c3c78;
+  color: #fff;
+  border: 1px solid #0c3c78;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+body.lp-s90 .site-header .btn.small:hover{
+  filter: brightness(.95);
+}
+
+/* フッター */
+body.lp-s90 .site-footer{
+  margin-top: 64px;
+  border-top: 1px solid rgba(15,23,42,.08);
+  background: #fff;
+}
+
+body.lp-s90 .site-footer .footer-inner{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  flex-wrap:wrap;
+}
+
+body.lp-s90 .site-footer .foot-links{
+  display:flex;
+  gap: 14px;
+  flex-wrap:wrap;
+}
+
+body.lp-s90 .site-footer .foot-links a{
+  font-size: 13px;
+  color: #334155;
+  text-decoration:none;
+}
+body.lp-s90 .site-footer .foot-links a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.lp-s90 .site-footer .copy{
+  margin: 0;
+  padding: 10px 20px 18px;
+  text-align:center;
+  font-size: 12px;
+  color: rgba(51,65,85,.75);
+}
+
+/* LPのCTAボタンも本サイトトーンに寄せる（既存.btn btn-primaryを尊重しつつ） */
+body.lp-s90 .lp-s90-btn{
+  border-radius: 999px;
+}
