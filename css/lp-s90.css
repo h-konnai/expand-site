@@ -1,342 +1,618 @@
 /* ==================================================
-   Starter-90 LP CSS
+   Starter-90 LP (lp-s90)
    Scope: body.lp-s90 ONLY
-   完全独立・貼り替え前提
+   Policy:
+   - Do not break /css/styles.css
+   - Override only inside body.lp-s90
+   - LP is standalone, predictable, and lightweight
 ================================================== */
 
 /* -------------------------
-   基本リセット（LP内のみ）
+   Tokens (LP only)
 ------------------------- */
-body.lp-s90 {
-  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP",
-               "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  color: #1b1b1f;
-  background: #ffffff;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
-  text-rendering: optimizeLegibility;
+body.lp-s90{
+  --s90-ink:#1b1b1f;
+  --s90-muted:#4b5563;
+  --s90-soft:#6b7280;
+
+  --s90-brand:#0c3c78;
+  --s90-brand-2:#11529f;
+  --s90-ring:rgba(12,60,120,.18);
+
+  --s90-bg:#ffffff;
+  --s90-bg-2:#f7f9fc;
+
+  --s90-line:#e5e7eb;
+  --s90-line-2:#eef2f7;
+
+  --s90-radius:14px;
+  --s90-shadow:0 10px 26px rgba(16,24,40,.06);
+
+  --s90-container:1080px;
+  --s90-gutter:20px;
+
+  --s90-section-py:72px;
+  --s90-section-py-sp:52px;
 }
 
-body.lp-s90 * {
-  box-sizing: border-box;
+/* -------------------------
+   Base reset (LP only)
+------------------------- */
+body.lp-s90{
+  font-family: system-ui,-apple-system,"Segoe UI","Noto Sans JP","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  color:var(--s90-ink);
+  background:var(--s90-bg);
+  line-height:1.7;
+  letter-spacing:.02em;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
 }
+
+body.lp-s90 *{ box-sizing:border-box; }
 
 body.lp-s90 h1,
 body.lp-s90 h2,
 body.lp-s90 h3,
 body.lp-s90 p,
 body.lp-s90 ul,
-body.lp-s90 ol {
-  margin: 0;
-  padding: 0;
+body.lp-s90 ol,
+body.lp-s90 figure{
+  margin:0;
 }
+
+body.lp-s90 p{ line-height:1.85; }
 
 body.lp-s90 ul,
-body.lp-s90 ol {
-  padding-left: 1.2em;
+body.lp-s90 ol{
+  padding-left:1.2em;
 }
 
-body.lp-s90 section {
-  padding: 64px 0;
+body.lp-s90 li{
+  margin:.25rem 0;
 }
 
-/* container（本サイトを借りるが安全側に寄せる） */
-body.lp-s90 .container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 20px;
+body.lp-s90 a{
+  color:var(--s90-brand);
+  text-decoration:none;
+}
+
+body.lp-s90 a:hover{
+  text-decoration:underline;
+}
+
+body.lp-s90 :focus-visible{
+  outline:3px solid var(--s90-ring);
+  outline-offset:2px;
+  border-radius:10px;
+}
+
+body.lp-s90 img,
+body.lp-s90 svg{
+  max-width:100%;
+  height:auto;
+}
+
+/* container (LP only) */
+body.lp-s90 .container{
+  max-width:var(--s90-container);
+  margin:0 auto;
+  padding:0 var(--s90-gutter);
+}
+
+/* section spacing */
+body.lp-s90 section{
+  padding:var(--s90-section-py) 0;
+}
+
+@media (max-width:767px){
+  body.lp-s90 section{
+    padding:var(--s90-section-py-sp) 0;
+  }
 }
 
 /* -------------------------
-   共通テキスト
+   Typography scale (LP only)
 ------------------------- */
-body.lp-s90 h1 {
-  font-size: clamp(26px, 3.2vw, 36px);
-  line-height: 1.35;
-  font-weight: 600;
+body.lp-s90 h1{
+  font-size:clamp(28px, 3.2vw, 38px);
+  line-height:1.28;
+  font-weight:650;
+  letter-spacing:.01em;
 }
 
-body.lp-s90 h2 {
-  font-size: clamp(22px, 2.6vw, 28px);
-  line-height: 1.4;
-  font-weight: 600;
+body.lp-s90 h2{
+  font-size:clamp(22px, 2.6vw, 30px);
+  line-height:1.35;
+  font-weight:650;
+  letter-spacing:.01em;
 }
 
-body.lp-s90 h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
+body.lp-s90 h3{
+  font-size:1.05rem;
+  line-height:1.4;
+  font-weight:650;
 }
 
-body.lp-s90 p {
-  font-size: 0.95rem;
-  line-height: 1.8;
+body.lp-s90 .lp-s90-lead{
+  color:var(--s90-muted);
 }
 
-body.lp-s90 li {
-  font-size: 0.95rem;
-  line-height: 1.7;
+/* -------------------------
+   Common blocks (LP only)
+------------------------- */
+body.lp-s90 .lp-s90-card{
+  background:#fff;
+  border:1px solid var(--s90-line);
+  border-radius:var(--s90-radius);
+  box-shadow: none;
+}
+
+body.lp-s90 .lp-s90-card--soft{
+  background:linear-gradient(180deg, rgba(12,60,120,.03), transparent 60%), #fff;
+}
+
+body.lp-s90 .lp-s90-kicker{
+  font-size:13px;
+  letter-spacing:.14em;
+  color:var(--s90-soft);
+}
+
+/* -------------------------
+   Buttons (LP only)
+   - We DO NOT modify .btn / .btn-primary globally
+   - We only tune the LP button via .lp-s90-btn
+------------------------- */
+body.lp-s90 .lp-s90-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 26px;
+  border-radius:999px;
+  font-size:.92rem;
+  font-weight:650;
+  line-height:1;
+  white-space:nowrap;
+  text-decoration:none;
+  transform:translateZ(0);
+}
+
+body.lp-s90 .lp-s90-btn:focus-visible{
+  outline:3px solid var(--s90-ring);
+  outline-offset:3px;
+}
+
+/* If styles.css sets .btn visuals, we still ensure legibility */
+body.lp-s90 a.lp-s90-btn{
+  text-decoration:none;
 }
 
 /* -------------------------
    HERO
 ------------------------- */
-body.lp-s90 .lp-s90-hero {
-  padding: 96px 0 80px;
+body.lp-s90 .lp-s90-hero{
+  padding:96px 0 84px;
   background:
     radial-gradient(600px 300px at 20% 25%, rgba(12,60,120,.06), transparent 60%),
     linear-gradient(180deg, rgba(12,60,120,.04), transparent 55%),
-    #ffffff;
+    #fff;
 }
 
-body.lp-s90 .lp-s90-hero__eyebrow {
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  color: #4b5563;
-  margin-bottom: 12px;
+body.lp-s90 .lp-s90-hero__inner{
+  max-width:var(--s90-container);
 }
 
-body.lp-s90 .lp-s90-hero__title {
-  margin-bottom: 20px;
+body.lp-s90 .lp-s90-hero__eyebrow{
+  margin-bottom:12px;
 }
 
-body.lp-s90 .lp-s90-hero__lead {
-  max-width: 42em;
-  margin-bottom: 28px;
-  color: #374151;
+body.lp-s90 .lp-s90-hero__title{
+  margin-bottom:18px;
 }
 
-body.lp-s90 .lp-s90-hero__cta {
-  margin-bottom: 12px;
+body.lp-s90 .lp-s90-hero__lead{
+  max-width:46em;
+  margin-bottom:26px;
+  color:var(--s90-muted);
 }
 
-body.lp-s90 .lp-s90-hero__subnav a {
-  font-size: 0.85rem;
-  color: #0c3c78;
-  text-decoration: underline;
+body.lp-s90 .lp-s90-hero__cta{
+  margin-bottom:12px;
 }
 
-/* CTAボタン（本サイトbtnを借りるが視覚を安定させる） */
-body.lp-s90 .lp-s90-btn {
-  display: inline-block;
-  padding: 12px 26px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
+body.lp-s90 .lp-s90-hero__subnav{
+  margin-top:8px;
 }
 
-/* アンカーずれ対策 */
-body.lp-s90 #steps {
-  scroll-margin-top: 96px;
+body.lp-s90 .lp-s90-hero__anchor{
+  font-size:.9rem;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+@media (max-width:767px){
+  body.lp-s90 .lp-s90-hero{
+    padding:76px 0 66px;
+  }
+}
+
+/* anchor offset for sticky header */
+body.lp-s90 #steps{
+  scroll-margin-top:96px;
 }
 
 /* -------------------------
    EMPATHY
 ------------------------- */
-body.lp-s90 .lp-s90-empathy__title {
-  margin-bottom: 20px;
+body.lp-s90 .lp-s90-empathy__title{
+  margin-bottom:18px;
 }
 
-body.lp-s90 .lp-s90-empathy__list {
-  margin-bottom: 20px;
+body.lp-s90 .lp-s90-empathy__list{
+  margin:0;
+  margin-top:14px;
+  margin-bottom:16px;
+  padding-left:1.2em;
 }
 
-body.lp-s90 .lp-s90-empathy__item {
-  margin-bottom: 8px;
+body.lp-s90 .lp-s90-empathy__item{
+  color:var(--s90-ink);
 }
 
-body.lp-s90 .lp-s90-empathy__closing {
-  margin-top: 16px;
-  color: #374151;
+body.lp-s90 .lp-s90-empathy__closing{
+  margin-top:10px;
+  color:var(--s90-muted);
 }
 
 /* -------------------------
    OVERVIEW
 ------------------------- */
-body.lp-s90 .lp-s90-overview__text {
-  max-width: 46em;
-  margin: 16px 0 20px;
+body.lp-s90 .lp-s90-overview__title{
+  margin-bottom:14px;
 }
 
-body.lp-s90 .lp-s90-overview__points {
-  margin-bottom: 16px;
+body.lp-s90 .lp-s90-overview__text{
+  margin-top:10px;
+  margin-bottom:18px;
+  max-width:52em;
+  color:var(--s90-muted);
 }
 
-body.lp-s90 .lp-s90-overview__point {
-  margin-bottom: 6px;
+body.lp-s90 .lp-s90-overview__points{
+  margin:0;
+  margin-bottom:14px;
+}
+
+body.lp-s90 .lp-s90-overview__point{
+  color:var(--s90-ink);
+}
+
+body.lp-s90 .lp-s90-overview__closing{
+  color:var(--s90-muted);
 }
 
 /* -------------------------
    STEPS
 ------------------------- */
-body.lp-s90 .lp-s90-steps__grid {
-  display: grid;
-  gap: 20px;
-  margin-top: 28px;
+body.lp-s90 .lp-s90-steps__title{
+  margin-bottom:18px;
 }
 
-@media (min-width: 768px) {
-  body.lp-s90 .lp-s90-steps__grid {
-    grid-template-columns: repeat(2, 1fr);
+body.lp-s90 .lp-s90-steps__grid{
+  display:grid;
+  gap:18px;
+  margin-top:22px;
+}
+
+@media (min-width:768px){
+  body.lp-s90 .lp-s90-steps__grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
   }
 }
 
-body.lp-s90 .lp-s90-steps__card {
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 20px 22px;
-  background: #ffffff;
+body.lp-s90 .lp-s90-steps__card{
+  padding:20px 22px;
+  border:1px solid var(--s90-line);
+  border-radius:var(--s90-radius);
+  background:#fff;
 }
 
-body.lp-s90 .lp-s90-steps__cardTitle {
-  margin-bottom: 10px;
+body.lp-s90 .lp-s90-steps__head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
 }
 
-body.lp-s90 .lp-s90-steps__items li {
-  margin-bottom: 6px;
+body.lp-s90 .lp-s90-steps__icon{
+  width:28px;
+  height:28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--s90-brand);
+  flex:0 0 auto;
 }
 
-body.lp-s90 .lp-s90-steps__note {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: #4b5563;
+body.lp-s90 .lp-s90-steps__icon svg{
+  width:100%;
+  height:100%;
+  display:block;
 }
 
-/* タイムラインSVG */
-body.lp-s90 .lp-s90-steps__timeline {
-  margin: 32px auto 0;
-  max-width: 980px;
-  color: #0c3c78;
+body.lp-s90 .lp-s90-steps__cardTitle{
+  margin:0;
 }
 
-body.lp-s90 .lp-s90-steps__timeline svg {
-  width: 100%;
-  height: auto;
-  display: block;
+body.lp-s90 .lp-s90-steps__items{
+  margin:0;
+  margin-top:6px;
+}
+
+body.lp-s90 .lp-s90-steps__items li{
+  margin:.2rem 0;
+}
+
+body.lp-s90 .lp-s90-steps__note{
+  margin-top:10px;
+  font-size:.9rem;
+  color:var(--s90-muted);
+}
+
+/* Timeline SVG (inline or <img>) */
+body.lp-s90 .lp-s90-steps__timeline{
+  color:var(--s90-brand);
+  max-width:980px;
+  margin:30px auto 0;
+}
+
+body.lp-s90 .lp-s90-steps__timeline svg{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* If you use <img src="...steps-timeline.svg"> */
+body.lp-s90 .lp-s90-steps__timeline img{
+  width:100%;
+  height:auto;
+  display:block;
 }
 
 /* -------------------------
    PLANS
 ------------------------- */
-body.lp-s90 .lp-s90-plans__grid {
-  display: grid;
-  gap: 20px;
-  margin-top: 28px;
+body.lp-s90 .lp-s90-plans__title{
+  margin-bottom:18px;
 }
 
-@media (min-width: 768px) {
-  body.lp-s90 .lp-s90-plans__grid {
-    grid-template-columns: repeat(3, 1fr);
+body.lp-s90 .lp-s90-plans__grid{
+  display:grid;
+  gap:18px;
+  margin-top:22px;
+}
+
+@media (min-width:768px){
+  body.lp-s90 .lp-s90-plans__grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
   }
 }
 
-body.lp-s90 .lp-s90-plans__card {
-  position: relative;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 22px;
-  background: #ffffff;
+body.lp-s90 .lp-s90-plans__card{
+  position:relative;
+  padding:22px;
+  border:1px solid var(--s90-line);
+  border-radius:var(--s90-radius);
+  background:#fff;
 }
 
-body.lp-s90 .lp-s90-plans__name {
-  margin-bottom: 12px;
+body.lp-s90 .lp-s90-plans__card--recommended{
+  border-color:rgba(12,60,120,.25);
+  box-shadow:var(--s90-shadow);
 }
 
-body.lp-s90 .lp-s90-plans__list li {
-  margin-bottom: 6px;
+body.lp-s90 .lp-s90-plans__name{
+  margin-bottom:12px;
 }
 
-body.lp-s90 .lp-s90-plans__badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
+body.lp-s90 .lp-s90-plans__list{
+  margin:0;
+}
+
+body.lp-s90 .lp-s90-plans__list li{
+  margin:.25rem 0;
+}
+
+body.lp-s90 .lp-s90-plans__badge{
+  position:absolute;
+  top:14px;
+  right:14px;
+  color:var(--s90-brand);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+body.lp-s90 .lp-s90-plans__badge svg{
+  width:92px;
+  height:auto;
+  display:block;
 }
 
 /* -------------------------
    BEFORE / AFTER
 ------------------------- */
-body.lp-s90 .lp-s90-ba__grid {
-  display: grid;
-  gap: 20px;
-  margin-top: 28px;
+body.lp-s90 .lp-s90-ba__title{
+  margin-bottom:10px;
 }
 
-@media (min-width: 768px) {
-  body.lp-s90 .lp-s90-ba__grid {
-    grid-template-columns: repeat(2, 1fr);
+/* Optional mini diagram (inline or img) */
+body.lp-s90 .lp-s90-ba__mini{
+  margin-top:14px;
+  color:var(--s90-brand);
+  opacity:.95;
+}
+
+body.lp-s90 .lp-s90-ba__mini svg,
+body.lp-s90 .lp-s90-ba__mini img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+body.lp-s90 .lp-s90-ba__grid{
+  display:grid;
+  gap:18px;
+  margin-top:22px;
+}
+
+@media (min-width:768px){
+  body.lp-s90 .lp-s90-ba__grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
   }
 }
 
-body.lp-s90 .lp-s90-ba__col {
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 20px 22px;
-  background: #ffffff;
+body.lp-s90 .lp-s90-ba__col{
+  padding:20px 22px;
+  border:1px solid var(--s90-line);
+  border-radius:var(--s90-radius);
+  background:#fff;
 }
 
-body.lp-s90 .lp-s90-ba__head {
-  margin-bottom: 10px;
+body.lp-s90 .lp-s90-ba__head{
+  margin-bottom:10px;
+}
+
+body.lp-s90 .lp-s90-ba__list{
+  margin:0;
 }
 
 /* -------------------------
    FLOW
 ------------------------- */
-body.lp-s90 .lp-s90-flow__list {
-  margin: 20px 0 12px;
+body.lp-s90 .lp-s90-flow__title{
+  margin-bottom:18px;
 }
 
-body.lp-s90 .lp-s90-flow__item {
-  margin-bottom: 6px;
+body.lp-s90 .lp-s90-flow__list{
+  margin:0;
+  margin-top:12px;
+  margin-bottom:10px;
+  padding-left:1.2em;
 }
 
-body.lp-s90 .lp-s90-flow__note {
-  font-size: 0.85rem;
-  color: #4b5563;
+body.lp-s90 .lp-s90-flow__item{
+  margin:.25rem 0;
+}
+
+body.lp-s90 .lp-s90-flow__note{
+  margin-top:8px;
+  font-size:.9rem;
+  color:var(--s90-muted);
 }
 
 /* -------------------------
-   FAQ
+   FAQ (details/summary)
 ------------------------- */
-body.lp-s90 .lp-s90-faq__item {
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin-bottom: 12px;
-  background: #ffffff;
+body.lp-s90 .lp-s90-faq__title{
+  margin-bottom:18px;
 }
 
-body.lp-s90 .lp-s90-faq__q {
-  cursor: pointer;
-  font-weight: 600;
+body.lp-s90 .lp-s90-faq__items{
+  margin-top:10px;
 }
 
-body.lp-s90 .lp-s90-faq__a {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #374151;
+body.lp-s90 .lp-s90-faq__item{
+  border:1px solid var(--s90-line);
+  border-radius:var(--s90-radius);
+  background:#fff;
+  padding:14px 16px;
+  margin-bottom:12px;
+}
+
+body.lp-s90 .lp-s90-faq__q{
+  cursor:pointer;
+  font-weight:650;
+  list-style:none;
+}
+
+body.lp-s90 .lp-s90-faq__q::-webkit-details-marker{
+  display:none;
+}
+
+body.lp-s90 .lp-s90-faq__q{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+}
+
+body.lp-s90 .lp-s90-faq__q::after{
+  content:"+";
+  font-weight:700;
+  color:var(--s90-brand);
+  line-height:1;
+  margin-top:2px;
+}
+
+body.lp-s90 details[open] > summary.lp-s90-faq__q::after{
+  content:"–";
+}
+
+body.lp-s90 .lp-s90-faq__a{
+  margin-top:10px;
+  color:var(--s90-muted);
+  padding-top:10px;
+  border-top:1px solid var(--s90-line-2);
 }
 
 /* -------------------------
    FINAL CTA
 ------------------------- */
-body.lp-s90 .lp-s90-cta {
-  padding: 96px 0;
-  background: #f7f9fc;
+body.lp-s90 .lp-s90-cta{
+  padding:96px 0;
+  background:var(--s90-bg-2);
+  border-top:1px solid var(--s90-line-2);
 }
 
-body.lp-s90 .lp-s90-cta__lead {
-  margin-top: 12px;
-  margin-bottom: 20px;
+body.lp-s90 .lp-s90-cta__title{
+  margin-bottom:10px;
+}
+
+body.lp-s90 .lp-s90-cta__lead{
+  color:var(--s90-muted);
+  margin-top:10px;
+}
+
+body.lp-s90 .lp-s90-cta__actions{
+  margin-top:18px;
 }
 
 /* -------------------------
-   SP調整
+   Utilities (LP only)
 ------------------------- */
-@media (max-width: 767px) {
-  body.lp-s90 section {
-    padding: 48px 0;
+@media (max-width:767px){
+  body.lp-s90 .lp-s90-steps__card,
+  body.lp-s90 .lp-s90-plans__card,
+  body.lp-s90 .lp-s90-ba__col{
+    padding:18px 18px;
   }
 
-  body.lp-s90 .lp-s90-hero {
-    padding: 72px 0 64px;
+  body.lp-s90 .lp-s90-steps__icon{
+    width:26px;
+    height:26px;
+  }
+
+  body.lp-s90 .lp-s90-cta{
+    padding:78px 0;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  body.lp-s90 *{
+    scroll-behavior:auto !important;
+    transition:none !important;
+    animation:none !important;
   }
 }
