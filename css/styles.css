@@ -881,3 +881,40 @@ body{
 .lp-entry a:hover{
   text-decoration: underline;
 }
+/* =========================
+  LP entry: Starter-90 variant
+  (safe add-on)
+========================= */
+.lp-entry--s90{
+  background: #f5f8ff;
+  border: 1px solid #e2ecfb;
+}
+
+.lp-entry__inner{
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.lp-entry__eyebrow{
+  margin: 0 0 6px;
+  font-size: 13px;
+  letter-spacing: .06em;
+  color: #6b7280;
+}
+
+.lp-entry__title{
+  margin: 0 0 10px;
+  font-size: clamp(18px, 2.2vw, 22px);
+}
+
+.lp-entry__text{
+  margin: 0 0 16px;
+  color: #4b5563;
+  line-height: 1.9;
+}
+
+.lp-entry__actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
