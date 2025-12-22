@@ -21,7 +21,7 @@ body{
   }
 /* 本文だけに効かせる */
 .site-main {
-  letter-spacing: 0.3em;
+  letter-spacing: 0.5em;
 }
 
 /* Header */
