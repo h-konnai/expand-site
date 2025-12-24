@@ -918,3 +918,65 @@ body{
   gap: 10px;
   flex-wrap: wrap;
 }
+
+/* ================================
+   HOTFIX: Text overlap / overflow (PC)
+   목적: 重なり・はみ出し・横スクロールを止める（土台優先）
+   ================================ */
+
+/* 1) 横スクロールの根絶（まず土台） */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2) 文字の基本行間（重なり防止） */
+body {
+  line-height: 1.6;
+}
+
+h1, h2, h3, p, li {
+  line-height: 1.6;
+}
+
+/* 3) 画像/ボタン/長い文字列のはみ出し防止 */
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+a, p, li, h1, h2, h3 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 4) “固定高さ”で潰れるのを止める（hero/section系の保険）
+   ※既存CSSで height が入っていても、ここで自然高に戻す */
+.hero,
+.section,
+main section {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* 5) “absolute/translateで文字位置調整”がある場合の保険
+   ※見出し/本文が absolute で重なる事故を抑える */
+.hero h1,
+.hero .lead,
+.hero p,
+.section h2,
+.section p {
+  position: static !important;
+  transform: none !important;
+}
+
+/* 6) header/footer周りの詰まりで被る事故を抑える */
+.site-header,
+.site-footer {
+  position: relative;
+  height: auto;
+}
+
+main {
+  display: block;
+}
