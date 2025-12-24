@@ -15,6 +15,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="description" content="お問い合わせありがとうございます。担当者よりご連絡いたします。">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css?v=3">
+
+  <script>
+  (function () {
+    try {
+      var src = localStorage.getItem('expand_lp_source') || '';
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'expand_thanks',
+        expand_lp_source: src
+      });
+      // 発火後に消して混線防止（重要）
+      localStorage.removeItem('expand_lp_source');
+    } catch (e) {}
+  })();
+</script>
+
 </head>
 
 <body>
