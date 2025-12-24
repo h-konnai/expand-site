@@ -990,6 +990,12 @@ body{
   .hero .lead { font-size: 15px; }
 }
 @media (max-width: 768px) {
+  /* 日本語の不自然な分断（例：コン｜サル…）を減らす */
+  main, .site-main {
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
   .foot-links {
     display: flex;
     flex-wrap: wrap;
@@ -1001,4 +1007,4 @@ body{
     text-align: left;
     white-space: normal;
   }
-}
+
