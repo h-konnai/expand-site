@@ -989,3 +989,16 @@ body{
   .hero h1 { font-size: 24px; }
   .hero .lead { font-size: 15px; }
 }
+@media (max-width: 768px) {
+  .foot-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+  }
+
+ /* 1列にする場合 */
+.foot-links a { flex: 1 1 100%; }
+    text-align: left;
+    white-space: normal;
+  }
+}
