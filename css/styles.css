@@ -996,15 +996,17 @@ body{
     overflow-wrap: break-word;
     line-break: strict;
   }
+
   .foot-links {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 12px;
   }
 
- /* 1列にする場合 */
-.foot-links a { flex: 1 1 100%; }
+  /* フッター：1列 */
+  .foot-links a {
+    flex: 1 1 100%;
     text-align: left;
     white-space: normal;
   }
-
+}
