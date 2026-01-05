@@ -9,7 +9,9 @@
     { "source": "/service-education.html", "destination": "/service-education", "permanent": true },
     { "source": "/privacy.html",           "destination": "/privacy",           "permanent": true },
     { "source": "/terms.html",             "destination": "/terms",             "permanent": true },
-    { "source": "/thanks.html",            "destination": "/thanks",            "permanent": true }
+    { "source": "/thanks.html",            "destination": "/thanks",            "permanent": true },
+    { "source": "/lp-fnb.html", "destination": "/lp-fnb", "permanent": true },
+    { "source": "/lp-s90.html", "destination": "/lp-s90", "permanent": true }
   ],
   "rewrites": [
     { "source": "/about",             "destination": "/about.html" },
@@ -20,7 +22,9 @@
     { "source": "/service-education", "destination": "/service-education.html" },
     { "source": "/privacy",           "destination": "/privacy.html" },
     { "source": "/terms",             "destination": "/terms.html" },
-    { "source": "/thanks",            "destination": "/thanks.html" }
+    { "source": "/thanks",            "destination": "/thanks.html" },
+    { "source": "/lp-fnb", "destination": "/lp-fnb.html" },
+    { "source": "/lp-s90", "destination": "/lp-s90.html" }
   ]
 }
 
