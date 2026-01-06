@@ -3,52 +3,53 @@
 
   <!-- ホーム -->
   <url>
-    <loc>https://fs-expand.co.jp/</loc>
+    <loc>https://www.fs-expand.co.jp/</loc>
   </url>
 
   <!-- 会社概要 -->
   <url>
-    <loc>https://fs-expand.co.jp/about.html</loc>
+    <loc>https://www.fs-expand.co.jp/about</loc>
   </url>
 
   <!-- お問い合わせ -->
   <url>
-    <loc>https://fs-expand.co.jp/contact.html</loc>
+    <loc>https://www.fs-expand.co.jp/contact</loc>
   </url>
 
   <!-- プライバシーポリシー -->
   <url>
-    <loc>https://fs-expand.co.jp/privacy.html</loc>
-  </url>
-
-  <!-- サービス：営業支援・CRM / MA構築 -->
-  <url>
-    <loc>https://fs-expand.co.jp/service-crm.html</loc>
-  </url>
-
-  <!-- サービス：業務設計・DX推進 -->
-  <url>
-    <loc>https://fs-expand.co.jp/service-dx.html</loc>
-  </url>
-
-  <!-- サービス：教育・人材育成プログラム -->
-  <url>
-    <loc>https://fs-expand.co.jp/service-education.html</loc>
-  </url>
-
-  <!-- サービス：Web制作・マーケティング支援 -->
-  <url>
-    <loc>https://fs-expand.co.jp/service-web.html</loc>
+    <loc>https://www.fs-expand.co.jp/privacy</loc>
   </url>
 
   <!-- 利用規約 -->
   <url>
-    <loc>https://fs-expand.co.jp/terms.html</loc>
+    <loc>https://www.fs-expand.co.jp/terms</loc>
   </url>
 
-  <!-- お問い合わせ完了画面 -->
+  <!-- サービス -->
   <url>
-    <loc>https://fs-expand.co.jp/thanks.html</loc>
+    <loc>https://www.fs-expand.co.jp/service-crm</loc>
+  </url>
+
+  <url>
+    <loc>https://www.fs-expand.co.jp/service-dx</loc>
+  </url>
+
+  <url>
+    <loc>https://www.fs-expand.co.jp/service-education</loc>
+  </url>
+
+  <url>
+    <loc>https://www.fs-expand.co.jp/service-web</loc>
+  </url>
+
+  <!-- LP -->
+  <url>
+    <loc>https://www.fs-expand.co.jp/lp-s90</loc>
+  </url>
+
+  <url>
+    <loc>https://www.fs-expand.co.jp/lp-fnb</loc>
   </url>
 
 </urlset>
