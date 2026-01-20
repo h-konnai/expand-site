@@ -10,8 +10,11 @@
     { "source": "/privacy.html",           "destination": "/privacy",           "permanent": true },
     { "source": "/terms.html",             "destination": "/terms",             "permanent": true },
     { "source": "/thanks.html",            "destination": "/thanks",            "permanent": true },
-    { "source": "/lp-fnb.html", "destination": "/lp-fnb", "permanent": true },
-    { "source": "/lp-s90.html", "destination": "/lp-s90", "permanent": true }
+
+    { "source": "/lp-fnb.html",            "destination": "/lp-fnb",            "permanent": true },
+    { "source": "/lp-s90.html",            "destination": "/lp-s90",            "permanent": true },
+
+    { "source": "/building-support.html",  "destination": "/building-support",  "permanent": true }
   ],
   "rewrites": [
     { "source": "/about",             "destination": "/about.html" },
@@ -23,8 +26,11 @@
     { "source": "/privacy",           "destination": "/privacy.html" },
     { "source": "/terms",             "destination": "/terms.html" },
     { "source": "/thanks",            "destination": "/thanks.html" },
-    { "source": "/lp-fnb", "destination": "/lp-fnb.html" },
-    { "source": "/lp-s90", "destination": "/lp-s90.html" }
+
+    { "source": "/lp-fnb",            "destination": "/lp-fnb.html" },
+    { "source": "/lp-s90",            "destination": "/lp-s90.html" },
+
+    { "source": "/building-support",  "destination": "/building-support.html" }
   ]
 }
 
