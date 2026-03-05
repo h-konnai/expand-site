@@ -1055,6 +1055,8 @@ font-weight:700;
 letter-spacing:0.03em;
 }
 
+/* footer layout fix */
+
 .site-footer{
 text-align:center;
 padding:40px 20px;
@@ -1068,17 +1070,18 @@ margin:0 auto;
 .foot-links{
 display:flex;
 justify-content:center;
+align-items:center;
 gap:24px;
 flex-wrap:wrap;
-margin-bottom:16px;
+width:100%;
+margin:0 auto;
 }
 
 .foot-links a{
-text-decoration:none;
+display:inline-block;
 }
 
 .copy{
+margin-top:20px;
 text-align:center;
-font-size:14px;
-opacity:0.7;
 }
