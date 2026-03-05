@@ -1011,27 +1011,41 @@ body{
   }
 }
 
-/* flow structure */
+/* FLOW（構造フロー / 支援プロセス） */
 
 .flow-vertical{
-text-align:center;
-margin-top:24px;
+  margin-top:24px;
+  text-align:center;
 }
 
+/* ↓以外のBOX */
 .flow-step{
-margin:12px 0;
+
+  background:#dbeafe;
+  border-radius:12px;
+
+  padding:22px 20px;   /* ボックス内の上下余白 */
+  margin:14px auto;    /* ボックス同士の間隔 */
+
+  max-width:520px;
 }
 
+/* 英語タイトル */
 .flow-title{
-font-weight:700;
+  font-weight:700;
+  color:#1e3a8a;
 }
 
+/* 日本語補足 */
 .flow-ja{
-font-size:14px;
-opacity:0.7;
+  font-size:14px;
+  margin-top:6px;
+  opacity:0.8;
 }
 
+/* 矢印 */
 .flow-arrow{
-font-size:20px;
-margin:8px 0;
+  font-size:22px;
+  margin:6px 0;
+  color:#1e3a8a;
 }
