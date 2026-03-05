@@ -1010,3 +1010,28 @@ body{
     white-space: normal;
   }
 }
+
+/* flow structure */
+
+.flow-vertical{
+text-align:center;
+margin-top:24px;
+}
+
+.flow-step{
+margin:12px 0;
+}
+
+.flow-title{
+font-weight:700;
+}
+
+.flow-ja{
+font-size:14px;
+opacity:0.7;
+}
+
+.flow-arrow{
+font-size:20px;
+margin:8px 0;
+}
