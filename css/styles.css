@@ -1056,22 +1056,29 @@ letter-spacing:0.03em;
 }
 
 .site-footer{
-width:100%;
+text-align:center;
+padding:40px 20px;
 }
 
 .footer-inner{
 max-width:1100px;
 margin:0 auto;
-padding:0 20px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
 }
 
 .foot-links{
 display:flex;
-gap:20px;
+justify-content:center;
+gap:24px;
 flex-wrap:wrap;
+margin-bottom:16px;
+}
+
+.foot-links a{
+text-decoration:none;
+}
+
+.copy{
+text-align:center;
+font-size:14px;
+opacity:0.7;
 }
