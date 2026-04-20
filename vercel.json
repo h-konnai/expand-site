@@ -17,7 +17,8 @@
     { "source": "/thanks.html", "destination": "/thanks", "permanent": true },
 
     { "source": "/lp-fnb.html", "destination": "/lp-fnb", "permanent": true },
-    { "source": "/lp-s90.html", "destination": "/lp-s90", "permanent": true }
+    { "source": "/lp-s90.html", "destination": "/lp-s90", "permanent": true },
+    { "source": "/service.html", "destination": "/service", "permanent": true }
   ],
 
   "rewrites": [
@@ -36,6 +37,7 @@
     { "source": "/thanks", "destination": "/thanks.html" },
 
     { "source": "/lp-fnb", "destination": "/lp-fnb.html" },
-    { "source": "/lp-s90", "destination": "/lp-s90.html" }
+    { "source": "/lp-s90", "destination": "/lp-s90.html" },
+    { "source": "/service", "destination": "/service.html" }
   ]
 }
