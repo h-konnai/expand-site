@@ -9,7 +9,7 @@
     { "source": "/service-dx.html", "destination": "/service-dx", "permanent": true },
     { "source": "/service-web.html", "destination": "/service-web", "permanent": true },
     { "source": "/service-education.html", "destination": "/service-education", "permanent": true },
-
+　　{ "source": "/building-support.html", "destination": "/building-support", "permanent": true },
     { "source": "/service-sales.html", "destination": "/service-sales", "permanent": true },
 
     { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
@@ -29,7 +29,7 @@
     { "source": "/service-dx", "destination": "/service-dx.html" },
     { "source": "/service-web", "destination": "/service-web.html" },
     { "source": "/service-education", "destination": "/service-education.html" },
-
+    { "source": "/building-support", "destination": "/building-support.html" },
     { "source": "/service-sales", "destination": "/service-sales.html" },
 
     { "source": "/privacy", "destination": "/privacy.html" },
