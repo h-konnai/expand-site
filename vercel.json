@@ -18,6 +18,7 @@
     { "source": "/terms.html", "destination": "/terms", "permanent": true },
     { "source": "/thanks.html", "destination": "/thanks", "permanent": true },
 
+    { "source": "/lp.html", "destination": "/lp", "permanent": true },
     { "source": "/lp-fnb.html", "destination": "/lp-fnb", "permanent": true },
     { "source": "/lp-s90.html", "destination": "/lp-s90", "permanent": true }
   ],
@@ -39,6 +40,7 @@
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/thanks", "destination": "/thanks.html" },
 
+    { "source": "/lp", "destination": "/lp.html" },
     { "source": "/lp-fnb", "destination": "/lp-fnb.html" },
     { "source": "/lp-s90", "destination": "/lp-s90.html" }
   ]
