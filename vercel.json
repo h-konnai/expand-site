@@ -19,6 +19,7 @@
     { "source": "/thanks.html", "destination": "/thanks", "permanent": true },
 
     { "source": "/lp.html", "destination": "/lp", "permanent": true },
+    { "source": "/lp-thanks.html", "destination": "/lp-thanks", "permanent": true },
     { "source": "/lp-fnb.html", "destination": "/lp-fnb", "permanent": true },
     { "source": "/lp-s90.html", "destination": "/lp-s90", "permanent": true }
   ],
@@ -41,6 +42,7 @@
     { "source": "/thanks", "destination": "/thanks.html" },
 
     { "source": "/lp", "destination": "/lp.html" },
+    { "source": "/lp-thanks", "destination": "/lp-thanks.html" },
     { "source": "/lp-fnb", "destination": "/lp-fnb.html" },
     { "source": "/lp-s90", "destination": "/lp-s90.html" }
   ]
